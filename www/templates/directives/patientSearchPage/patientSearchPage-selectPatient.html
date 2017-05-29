@@ -1,0 +1,84 @@
+<div class="patientSearch-utils-spacing">
+	<div class="searchContent">
+		<div class="searchLabel">Search By:</div>
+        <div class="inputForms">
+            <input id="addedInput" type="text" class="searchInp" ng-model="patientFilterText" ng-change="filterTextChanged()" placeholder="First name">
+          
+            <input type="text" id="secondTB"  class="newInp displayTextBox" name="{{searchParameter1.name}}" placeholder="{{searchParameter1.name}}" ng-model="modelname[searchParameter1.modelName]">
+
+            <input type="text" id="thirdTB" class="thirdTextBox displayThirdTextBox" name="{{searchParameter2.name}}" placeholder="{{searchParameter2.name}}" ng-model="modelname[searchParameter2.modelName]" /> 
+
+            <input type="text"  id="fourthTB" class="fourthTextBox displayFourthTextBox" placeholder="{{searchParameter3.name}}" ng-model="modelname[searchParameter3.modelName]" name="{{searchParameter3.name}}" />
+            
+            <div class="plusButtonDiv">
+                <button type="submit" ng-disabled="checkSearchParameterValue" class=" btn btn-primary btnAddParameter" ng-click="addParameterButtonClicked()" ng-style="addParameterButtonStyle"><span class="glyphicon glyphicon-plus btnAddParameterGlyphicon"></span></button>
+
+                <div class="searchParametersDiv" ng-style="searchOptionsStyle">
+                    <ul class="searchParametersOption">
+                        <li class="searchOption" ng-click=" onSearchParameterClick(searchParameter)" ng-repeat="searchParameter in searchParametersSet"><span class="glyphicon glyphicon-plus addSearchParameterGlyphicon"></span><span class="searchParameterName">{{searchParameter.name}}</span></li>
+          
+                    </ul>
+                </div>
+            </div>
+        </div>
+		<div class="searchButton"> <button type="submit" class=" btn btn-primary btnSearch" ng-click="onSearchClicked()" ng-disabled="searchDesabled">SEARCH</button></div>			  
+	</div>					   
+				   
+		<div class="patientSearchTable" id="patientSearchTable" ng-scroll-event="scrolled($event, isEndEvent);" ng-swipe-right="checkFunc()">
+		
+            <label class="resultsCount" ng-if="noTextEntered==1">No patient found</label>
+            <label class="resultsCount" ng-if="patients.length>-1">{{numberOfPatients}}</label>
+			<table class="patientDataTable">
+
+				<tr class="patientDataRow" ng-click="onPatientClicked(p)" ng-repeat="p in patients"> 
+					<td>								
+						<div class="patientDataMainDiv">
+						<div class="patientImageDiv"><img alt="patientIm" src="assets/images/profilepic.png" class="patientImage"></img></div>  
+						<div class="patientNameDiv">{{p.name}}</div>
+						<div class="patientDetailsDiv">
+							<div class="patientAgeDiv"> 
+								<table>
+									<tr>
+									   <td class="detailsHead">Age:</td>
+									</tr>
+									<tr> 
+									   <td class="detailsBody">{{p.age}} old</td>
+									</tr>
+								</table>
+							</div>
+							<div class="patientDOBDiv">
+								<table>
+									<tr>
+									   <td class="detailsHead">Date of Birth:</td>
+									</tr>
+									<tr>
+   									   <td class="detailsBody">{{p.dateOfBirth | date: 'MM-dd-yyyy'}} </td>
+									</tr>
+								</table>
+							</div>
+						    <div class="patientSSNDiv">
+								<table>
+									<tr>
+									   <td class="detailsHead">ID Number:</td>
+									</tr>
+									<tr> 
+									   <td class="detailsBody">{{p.IDNumber}}</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						</div>
+					</td> 
+				</tr>
+			</table>
+
+		</div>
+    <div class="patientSearchFooter">
+
+        <div class="hpe_logo_searchPage">
+            <img src="assets/images/hpe_NewLogo.png" alt="hp logo" class="logo_image">
+        </div>
+
+    </div>
+</div>
+

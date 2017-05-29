@@ -1,0 +1,42 @@
+﻿
+
+<div class="modal-body">
+    <div class="modal-container">
+        <table class="table">
+            <tbody>
+                <tr>
+                    <td width="30%" class="otherData"><span class="OtherFilter">IP ADDRESS:</span></td>
+                    <td>
+                        <input type="text" class="firstOtherTxt" ng-model="details.address" ng-style="ipAddressClassColor1">
+                    </td>
+                    <td>
+                        <div class="errorMsg">{{errorMessage1}}</div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td width="20%" class="otherData"><span class="OtherFilter">PORT NUMBER:</span></td>
+                    <td>
+                        <input type="text" class="firstOtherTxt" ng-model="details.port" type="number" ng-style="ipAddressClassColor2">
+                    </td>
+                    <td>
+                        <div class="errorMsg">{{errorMessage2}}</div>
+                    </td>
+                </tr>
+             </tbody>
+          </table>
+
+    </div>
+</div>
+<div class="modal-footer otherModal">
+    <div class="saveBtn">
+
+        <button type="submit" class="btn btn-primary btn-block btnUploadVitalCancel" ng-click="save(details.address,details.port)" ng-disabled="(progressBarSpecs.current < progressBarSpecs.max)">SAVE</button>
+        <button type="submit" class="btn btn-primary btn-block btnUploadVitalCancel" ng-click="close()">CANCEL</button> <!--close the vitals dialog-->
+    </div>
+   
+</div>
+
+
+
+

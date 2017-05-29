@@ -1,0 +1,234 @@
+<div class="observationDetailsContainer" ng-controller="observationDetailsController">
+    <div class="generalHeading">
+        <p class="pTagNoBottomMargin header">Observations</p>
+    </div>
+    <div class="singleRecordingContainer obsvAccordion" ng-repeat="obsv in observationsDetails" data-toggle="modal" data-target="" ng-click="observationClicked(obsv)">
+        <table class="obsType">
+            <tr class="detailType"><td>Type:</td></tr>
+            <tr class="detailTypeVal"><td>{{obsv.type|textFormat}}</td></tr>
+        </table>
+        <table class="obsDate">
+            <tr class="detailType"><td>Date:</td></tr>
+            <tr class="detailTypeVal"><td>{{obsv.date|date:'MM-dd-yyyy'}}</td></tr>
+        </table>
+        <span class="glyphicon glyphicon-chevron-right obsvChevron"></span>
+    </div>
+    <div class="modal fade observationMainModal" id="myModal5" role="dialog">
+        <div class="modal-dialog observationModalDialog">
+
+            <!-- Modal content-->
+            <div class="modal-content modalContent observationModalContent">
+                <div class="modal-header medicalConsltHeader">
+
+                    <h4 class="modal-title medicalConsltTitle">Vitals</h4>
+                    <button type="button" class="btn btn-default btnDismissMedicalConslt" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></button>
+
+
+
+                </div>
+                <div class="modal-body medicalConsltBody medicalVitalsBody">
+                    <div class="medicalConsltDetails">
+                        <div class="medicalConsltImageContainer" ng-bind-html="patientImageSource">
+
+                            <img src="assets/images/profilepic.png" class="medicalConsltPatientImg" />
+
+                        </div>
+                        <div class="medicalConsltPatientName" style="width: 64%;">
+                            {{patientData.patientDemographicsData.name}}
+                        </div>
+                        <div class="medicalConsltBasicsContainer">
+                            <table class="medicalConsltBasicsTable">
+
+                                <tr>
+                                    <td class="medicalConsltAttributeName ageColumn">Age:</td>
+                                    <td class="medicalConsltAttributeName dobColumn">Date of Birth:</td>
+                                    <td class="medicalConsltAttributeName idColumn">ID Number:</td>
+                                </tr>
+                                <tr>
+                                    <td class="medicalConsltAttributeValue ageColumn">{{patientData.patientDemographicsData.age}}</td>
+                                    <td class="medicalConsltAttributeValue dobColumn">{{patientData.patientDemographicsData.dob}}</td>
+                                    <td class="medicalConsltAttributeValue idColumn">{{patientData.patientBasicData.IDNumber}}</td>
+                                </tr>
+
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="observationBody vitalsObsvBody">
+                        <table class="observationAdditionalDetailsTable obsvReadingsTable">
+                            <tr class=" vitalsObsvRow">
+
+                                <td class="borderRight borderBottom tableData vitalsObsvCol noLeftPadding">
+                                    <table class="vitalValTable">
+                                        <tr><td class="medicalConsltDetailsAttributeName">Blood Pressure</td></tr>
+                                        <tr><td class="medicalConsltDetailsAttributeValue">{{obsvData.bloodPressure}}</td></tr>
+
+                                    </table>
+
+
+                                </td>
+                                <td class="borderRight borderBottom tableData vitalsObsvCol noLeftPadding">
+                                    <table class="vitalValTable">
+
+                                        <tr><td class="medicalConsltDetailsAttributeName">Pulse</td></tr>
+                                        <tr><td class="medicalConsltDetailsAttributeValue">{{obsvData.pulse|lowercase}}</td></tr>
+                                    </table>
+
+                                </td>
+                                <td class=" borderBottom tableData vitalsObsvCol noLeftPadding">
+                                    <table class="vitalValTable">
+
+                                        <tr><td class="medicalConsltDetailsAttributeName">Oxygen Saturation</td></tr>
+                                        <tr><td class="medicalConsltDetailsAttributeValue">{{obsvData.oxygenSaturation}}</td></tr>
+                                    </table>
+
+                                </td>
+                            </tr>
+                            <tr class=" vitalsObsvRow">
+
+                                <td class="borderRight borderBottom tableData vitalsObsvCol noLeftPadding">
+                                    <table class="vitalValTable">
+                                        <tr><td class="medicalConsltDetailsAttributeName">Weight</td></tr>
+                                        <tr><td class="medicalConsltDetailsAttributeValue">{{obsvData.weight|lowercase}}</td></tr>
+
+                                    </table>
+
+
+                                </td>
+                                <td class="borderRight borderBottom tableData vitalsObsvCol noLeftPadding">
+                                    <table class="vitalValTable">
+
+                                        <tr><td class="medicalConsltDetailsAttributeName">Height</td></tr>
+                                        <tr><td class="medicalConsltDetailsAttributeValue">{{obsvData.height|lowercase}}</td></tr>
+                                    </table>
+
+                                </td>
+                                <td class=" borderBottom tableData vitalsObsvCol noLeftPadding">
+                                    <table class="vitalValTable">
+
+                                        <tr><td class="medicalConsltDetailsAttributeName">BMI</td></tr>
+                                      <tr><td class="medicalConsltDetailsAttributeValue" ng-if="obsvData.bmi!=null">{{obsvData.bmi}} kg/m<sup>2</sup></td></tr>
+                                    </table>
+
+                                </td>
+                            </tr>
+                            <tr class=" vitalsObsvRow">
+
+                                <td class="borderRight borderBottom tableData vitalsObsvCol noLeftPadding">
+                                    <table class="vitalValTable">
+                                        <tr><td class="medicalConsltDetailsAttributeName">BMI Status</td></tr>
+                                        <tr><td class="medicalConsltDetailsAttributeValue">{{obsvData.bmiStatus}}</td></tr>
+
+                                    </table>
+
+
+                                </td>
+                                <td class="borderRight borderBottom tableData vitalsObsvCol noLeftPadding">
+                                    <table class="vitalValTable">
+
+                                        <tr><td class="medicalConsltDetailsAttributeName">Temperature</td></tr>
+                                        <tr><td class="medicalConsltDetailsAttributeValue" ng-if="obsvData.temperature!=null">{{obsvData.temperature}}<sup>o</sup>C
+                                      </td></tr>
+                                    </table>
+
+                                </td>
+                                <td class=" borderBottom tableData vitalsObsvCol noLeftPadding">
+                                    <table class="vitalValTable">
+
+                                        <tr><td class="medicalConsltDetailsAttributeName">Temp. Method</td></tr>
+                                        <tr><td class="medicalConsltDetailsAttributeValue">{{obsvData.temperatureMethod}}</td></tr>
+                                    </table>
+
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+                    <div class="observationData vitalsRecordData">
+                        Taken By:{{takenBy}}
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="modal fade observationMainModal" id="inrModal" role="dialog">
+
+
+
+
+        <div class="modal-dialog observationModalDialog">
+
+            <!-- Modal content-->
+            <div class="modal-content inrModalContent">
+                <div class="modal-header medicalConsltHeader">
+
+                    <h4 class="modal-title medicalConsltTitle">INR</h4>
+                    <button type="button" class="btn btn-default btnDismissMedicalConslt" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></button>
+
+
+
+                </div>
+                <div class="modal-body  inrBody">
+                    <div class="medicalConsltDetails">
+                        <div class="medicalConsltImageContainer" ng-bind-html="patientImageSource">
+
+                            <img src="assets/images/profilepic.png" class="medicalConsltPatientImg" />
+
+                        </div>
+                        <div class="medicalConsltPatientName" >
+                            {{patientData.patientDemographicsData.name}}
+                        </div>
+                        <div class="inrModalBasicData">
+                            <table class="medicalConsltBasicsTable">
+
+                                <tr>
+                                    <td class="medicalConsltAttributeName ageColumn">Age:</td>
+                                    <td class="medicalConsltAttributeName dobColumn">Date of Birth:</td>
+                                    <td class="medicalConsltAttributeName idColumn">ID Number:</td>
+                                </tr>
+                                <tr>
+                                    <td class="medicalConsltAttributeValue ageColumn">{{patientData.patientDemographicsData.age}}</td>
+                                    <td class="medicalConsltAttributeValue dobColumn">{{patientData.patientDemographicsData.dob|date:'MM-dd-yyyy'}}</td>
+                                    <td class="medicalConsltAttributeValue idColumn">{{patientData.patientBasicData.IDNumber}}</td>
+                                </tr>
+
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="inrData">
+                        <table class="inrDataMainTable">
+
+                            <tr class="inrDataMainTableRow">
+                                <td class="inrDataMainTableBox">
+                                    <table class="inrDatasubTable">
+                                        <tr class="medicalConsltDetailsAttributeName">
+                                            <td>
+                                                Calibrated Clot Time
+                                            </td>
+                                        </tr>
+                                        <tr class="medicalConsltDetailsAttributeValue"><td>{{obsvData.CCT}} secs.</td></tr>
+                                    </table>
+                                </td>
+                                <td class="inrDataMainTableBox">
+                                    <table class="inrDatasubTable">
+                                        <tr class="medicalConsltDetailsAttributeName"><td>INR</td></tr>
+                                        <tr class="medicalConsltDetailsAttributeValue"><td>{{obsvData.INR}}</td></tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,6 @@
+build\windows\bld\split.pri
+build\windows\bld\split.map.txt
+build\windows\bld\split.scale-140.pri
+build\windows\bld\split.scale-140.map.txt
+build\windows\bld\split.scale-180.pri
+build\windows\bld\split.scale-180.map.txt

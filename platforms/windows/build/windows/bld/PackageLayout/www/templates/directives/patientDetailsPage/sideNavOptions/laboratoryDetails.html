@@ -1,0 +1,383 @@
+﻿<div class="observationDetailsContainer" ng-controller="laboratoryDetailsController">
+    <div class="generalHeading">
+        <p class="pTagNoBottomMargin header">Laboratory</p>
+    </div>
+    <div class="singleRecordingContainer labsAccordion" ng-repeat="labs in labDetails" data-toggle="modal" data-target="" ng-click="labTypeClicked(labs)">
+        <table class="obsType">
+            <tr class="detailType"><td>Type:</td></tr>
+            <tr class="detailTypeVal"><td>{{labs.type}}</td></tr>
+        </table>
+        <table class="obsDate">
+            <tr class="detailType"><td>Date Taken:</td></tr>
+            <tr class="detailTypeVal"><td>{{labs.date|date:'MM-dd-yyyy'}}</td></tr>
+        </table>
+        <span class="glyphicon glyphicon-chevron-right obsvChevron"></span>
+        <span class="noResults" ng-if="labDetail.available=='no'">Results not available</span>
+
+
+    </div>
+    <div class="modal fade laboratoryMainModal" id="myModal1" role="dialog">
+        <div class="modal-dialog laboratoryModalDialog">
+
+            <!-- Modal content-->
+            <div class="modal-content modalContentLaboratory">
+                <div class="modal-header medicalConsltHeader">
+
+                    <!--<button type="button" class="close" data-dismiss="modal">&times;</button>-->
+                    <h4 class="modal-title medicalConsltTitle">Blood Test Result</h4>
+                    <button type="button" class="btn btn-default btnDismissMedicalConslt" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></button>
+
+                </div>
+                <div class="modal-body medicalConsltBody">
+                    <div class="medicalConsltDetails">
+                        <div class="medicalConsltImageContainer" ng-bind-html="patientImageSource">
+
+                            <img src="assets/images/profilepic.png" class="medicalConsltPatientImg" />
+
+                        </div>
+                        <div class="medicalConsltPatientName" >
+                            {{patientData.patientDemographicsData.name}}
+                        </div>
+                        <div class="labBasicsContainer">
+                            <table class="medicalConsltBasicsTable">
+
+                                <tr>
+                                    <td class="medicalConsltAttributeName ageColumn">Age:</td>
+                                    <td class="medicalConsltAttributeName dobColumn">Date of Birth:</td>
+                                    <td class="medicalConsltAttributeName idColumn">ID Number:</td>
+                                </tr>
+                                <tr>
+                                    <td class="medicalConsltAttributeValue ageColumn">{{patientData.patientBasicData.age}}</td>
+                                    <td class="medicalConsltAttributeValue dobColumn">{{patientData.patientDemographicsData.dob}}</td>
+                                    <td class="medicalConsltAttributeValue idColumn">{{patientData.patientBasicData.IDNumber}}</td>
+                                </tr>
+
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="labDetailsAreaContainer">
+                        <p class="hospitalName">Tallaght Hospital</p>
+
+
+                        <p class="pTagNoBottomMargin dateOfTestRow">
+                            Date Of Test:
+                           {{labsData.testDate| date: 'MM-dd-yyyy'}}
+                        </p>
+
+                        <p class="pTagNoBottomMargin dateImported">
+                            Date Imported to HealthOne:
+                           {{labsData.dateImported| date: 'MM-dd-yyyy'}}
+                        </p>
+
+                        <table class="labTable1">
+                            <tr>
+                                <td>Sequence:</td>
+                                <td>{{labsData.sequence}}</td>
+                            </tr>
+                            <tr>
+                                <td>Action Status:</td>
+                                <td>{{labsData.actionStatus}}</td>
+                            </tr>
+                            <tr>
+                                <td>Status:</td>
+                                <td>{{labsData.status}}</td>
+                            </tr>
+                        </table>
+                        <table class="labTable2">
+                            <tr>
+                                <td>MRN:</td>
+                                <td>{{labsData.MRN}}</td>
+                            </tr>
+                            <tr>
+                                <td>KUB:</td>
+                                <td>{{labsData.KUB}}</td>
+                            </tr>
+                            <tr>
+                                <td>Sample Type:</td>
+                                <td>{{labsData.sampleType}}</td>
+                            </tr>
+                        </table>
+                        <table class="labTable3">
+                            <tr>
+                                <td>Clinical Observations:</td>
+                                <td>{{labsData.clinicalObservations}}</td>
+                            </tr>
+                            <tr>
+                                <td>Radiology Number:</td>
+                                <td>{{labsData.radiologyNumber}}</td>
+                            </tr>
+                            <tr>
+                                <td>Results Flag:</td>
+                                <td>{{labsData.resultsFlag}}</td>
+                            </tr>
+                        </table>
+                        <table class="table table-bordered labTableDetails">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th colspan="6" style="text-align: center; font-weight: bold; font-family: MetricWebBlack;">CONVENTIONAL</th>
+                                </tr>
+                                <tr>
+                                    <th>Test Name</th>
+                                    <th style="width:4%"></th>
+                                    <th>Results</th>
+                                    <th style="width:4%"></th>
+                                    <th>Unit</th>
+                                    <th style="width:4%"></th>
+                                    <th>Reference Range</th>
+
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr style="height:29px;">
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                               
+                                <!--<tr ng-repeat="labData in labsData">
+                                    <td class="hgb">{{labData.valueName}}</td>
+                                    <td></td>
+                                    <td>{{labData.valueResult}}</td>
+                                    <td></td>
+                                    <td>{{labData.unit}}</td>
+                                    <td></td>
+                                    <td>{{labData.referenceRangeLow}}-{{labData.referenceRangeHigh}}</td>
+
+
+                                </tr>-->
+
+
+
+       <tr>
+         <td class="tableHeadLab" colspan="2">CBC Flow Cytometry</td>
+         <td></td>
+         <td></td>
+         <td></td>
+         <td></td>
+         <td></td>
+     </tr>
+              
+                                <tr>
+                                    <td class="hgb">HGB</td>
+                                    <td></td>
+                                    <td>{{labsData.HGB.results}}</td>
+                                    <td></td>
+                                    <td>{{labsData.HGB.unit}}</td>
+                                    <td></td>
+                                    <td>{{labsData.HGB.referenceRange}}</td>
+
+
+                                </tr>
+                               
+                                <tr>
+                                    <td>Hematocrit</td>
+                                    <td></td>
+                                    <td>{{labsData.Hematocrit.results}}</td>
+                                    <td></td>
+                                    <td>{{labsData.Hematocrit.unit}}</td>
+                                    <td></td>
+                                    <td>{{labsData.Hematocrit.referenceRange}}</td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>RBC</td>
+                                    <td></td>
+                                    <td>{{labsData.RBC.results}}</td>
+                                    <td></td>
+                                    <td>{{labsData.RBC.unit}}</td>
+                                    <td></td>
+                                    <td>{{labsData.RBC.referenceRange}}</td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>WBC</td>
+                                    <td>L</td>
+                                    <td>{{labsData.WBC.results}}</td>
+                                    <td></td>
+                                    <td>{{labsData.WBC.unit}}</td>
+                                    <td></td>
+                                    <td>{{labsData.WBC.referenceRange}}</td>
+
+
+                                </tr>
+                                <tr>
+                                    <td class="tableHeadLab">Differential Count</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Basophils</td>
+                                    <td>H</td>
+                                    <td>{{labsData.Basophils.results}}</td>
+                                    <td></td>
+                                    <td>{{labsData.Basophils.unit}}</td>
+                                    <td></td>
+                                    <td>{{labsData.Basophils.referenceRange}}</td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>Eosinophils</td>
+                                    <td></td>
+                                    <td>{{labsData.Eosinophils.results}}</td>
+                                    <td></td>
+                                    <td>{{labsData.Eosinophils.unit}}</td>
+                                    <td></td>
+                                    <td>{{labsData.Eosinophils.referenceRange}}</td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>Segmenters</td>
+                                    <td></td>
+                                    <td>{{labsData.Segmenters.results}}</td>
+                                    <td></td>
+                                    <td>{{labsData.Segmenters.unit}}</td>
+                                    <td></td>
+                                    <td>{{labsData.Segmenters.referenceRange}}</td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>Lymphocytes</td>
+                                    <td>H</td>
+                                    <td>{{labsData.Lymphocytes.results}}</td>
+                                    <td></td>
+                                    <td>{{labsData.Lymphocytes.unit}}</td>
+                                    <td></td>
+                                    <td>{{labsData.Lymphocytes.referenceRange}}</td>
+
+
+                                </tr>
+
+                                <tr>
+                                    <td>Monocytes</td>
+                                    <td>H</td>
+                                    <td>{{labsData.Monocytes.results}}</td>
+                                    <td></td>
+                                    <td>{{labsData.Monocytes.unit}}</td>
+                                    <td></td>
+                                    <td>{{labsData.Monocytes.referenceRange}}</td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>Platelet Count</td>
+                                    <td></td>
+                                    <td>{{labsData.plateletCount.results}}</td>
+                                    <td></td>
+                                    <td>{{labsData.plateletCount.unit}}</td>
+                                    <td></td>
+                                    <td>{{labsData.plateletCount.referenceRange}}</td>
+
+
+                                </tr>
+
+                              
+                                              
+      
+  
+     
+     
+    
+     
+    
+    
+    
+     <tr style="height:29px;">
+         <td></td>
+         <td></td>
+         <td></td>
+         <td></td>
+         <td></td>
+         <td></td>
+         <td></td>
+
+     </tr>
+     <tr>
+         <td>MCV</td>
+         <td></td>
+         <td>{{labsData.MCV.results}}</td>
+         <td></td>
+         <td>{{labsData.MCV.unit}}</td>
+         <td></td>
+         <td>{{labsData.MCV.referenceRange}}</td>
+
+
+     </tr>
+     <tr>
+         <td>MCH</td>
+         <td></td>
+         <td>{{labsData.MCH.results}}</td>
+         <td></td>
+         <td>{{labsData.MCH.unit}}</td>
+         <td></td>
+         <td>{{labsData.MCH.referenceRange}}</td>
+
+
+     </tr>
+     <tr>
+         <td>MCHC</td>
+         <td></td>
+         <td>{{labsData.MCHC.results}}</td>
+         <td></td>
+         <td>{{labsData.MCHC.unit}}</td>
+         <td></td>
+         <td>{{labsData.MCHC.referenceRange}}</td>
+
+
+     </tr>
+     <tr>
+         <td>RDW</td>
+         <td></td>
+         <td>{{labsData.RDW.results}}</td>
+         <td></td>
+         <td>{{labsData.RDW.unit}}</td>
+         <td></td>
+         <td>{{labsData.RDW.referenceRange}}</td>
+
+
+     </tr>
+
+
+     
+
+
+     <tr style="height:29px">
+         <td></td>
+         <td></td>
+         <td></td>
+         <td></td>
+         <td></td>
+         <td></td>
+         <td></td>
+     </tr>
+
+            </tbody>
+
+                        </table>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+

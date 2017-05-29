@@ -1,0 +1,1 @@
+C:\Users\raovars\cordovaProjects\hello12\TeleHealthCare-TLC-Branch\platforms\windows\build\phone\Debug\AnyCPU\SQLite3.winmd

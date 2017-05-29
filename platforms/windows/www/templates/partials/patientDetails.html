@@ -1,0 +1,227 @@
+<div class="generalPageContainers">
+    <div class="loadingGifContainer" id="pageLoadingGif" ng-style="loaderGifClass">
+        <div class="loadingGif"></div>
+    </div>
+
+    <div id="patientDetailsPage">
+        <div class="patientDetailsPagePageHeader">
+            <div class="headderContentTable">
+                <div class="imageContainerDiv floatLeft">
+                   
+                    <button class="backButtonClass" ng-click="backButtonClicked()">
+                        <img src="assets/images/back_icon.png" class="backButtonImage" />
+                    </button>
+                </div>
+                <div class="textContainerDiv floatLeft">
+                    <button class="headderTextClass" disabled>
+                        <p class="pageTitles">TLC, TeleHealthCare Service</p>
+                    </button>
+                </div>
+                <div class="imageContainerDiv floatLeft">
+                    <button class="notificationSymbolClass" enabled>
+                        <i class="fa fa-bell-o fa-2x"></i>
+
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="allDataContainer">
+            <div class="patientDetailsContainer">
+                <div class="patientBasicDetailsContainer">
+                    
+                    <div class="patientImageContainer">
+                  
+                        <div class="circleBorder" ng-bind-html="basicDetails.patientImageSource">
+                           
+                          <!--  <img src="{{basicDetails.patientImageSource}}" class="patientImg" />-->
+                        </div>
+                    </div>
+                    <div class="patientNameContainer">
+                        {{basicDetails.name}}
+                    </div>
+                    <div class="patientBasicsContainer">
+                        <table class="patientBasicsTable">
+
+                            <tr>
+                                <td class="detailsAttributeName ageColumn">Age:</td>
+                                <td class="detailsAttributeName dobColumn">Date of Birth:</td>
+                             
+                            </tr>
+                            <tr>
+                                <td class="detailsAttributeValue ageColumn">{{basicDetails.age}} </td>
+                                <td class="detailsAttributeValue dobColumn">{{basicDetails.dob}}</td>
+                               
+                            </tr>
+
+                        </table>
+                        <table class="resCodeTable">
+                            <tr>
+                                <td class="detailsAttributeName resCodeColumn">Resident Code:</td>
+                            </tr>
+                            <tr>
+                                <td class="detailsAttributeValue resCodeColumn">{{basicDetails.residentCode}}</td>
+
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+                <div class="patientAdditionalDetailsContainer">
+
+                    <div class="physiciansList">
+                        <table>
+                            <tr><td class="detailsAttributeName">General physician(s):</td></tr>
+                            <tr><td class="detailsAttributeValue">{{basicDetails.doctorName}}</td></tr>
+                           
+                        </table>
+
+
+                    </div>
+
+                    <table class="patientAdditionalDetailsTable">
+                        <tr class="tableRow verticalAlignment" >
+                          
+                            <td class="borderRight borderBottom tableData paddingTop" style="width:50%">
+                                <table>
+                                    <tr><td class="detailsAttributeName">Admission Date:</td></tr>
+                                    <tr><td class="detailsAttributeValue">{{basicDetails.admissionDate}}</td></tr>
+
+                                </table>
+
+
+                            </td>
+                            <td class=" borderBottom tableData paddingTop" >
+                                <table>
+
+                                    <tr><td class="detailsAttributeName">Location:</td></tr>
+                                    <tr><td class="detailsAttributeValue">{{basicDetails.bed}} <span ng-if="basicDetails.bed!=''">, </span>{{basicDetails.room}}<span ng-if="basicDetails.room!=''">, </span>{{basicDetails.floor}}</td></tr>
+                                </table>
+
+                            </td>
+                        </tr>
+                        <tr class="tableRow">
+                            <td class="borderRight tableData">
+                                <table>
+                                    <tr><td class="detailsAttributeName">Diet:</td></tr>
+                                    <tr><td class="detailsAttributeValue">{{basicDetails.diet}}</td></tr>
+                                </table>
+
+                            </td>
+                            <td class="tableData">
+                                <table  class="medicalComplianceTable">
+                                    <tr><td class="detailsAttributeName">Medication Compliance:</td></tr>
+                                    <tr>
+                                        <td class="detailsAttributeValue medicationValue" ng-if="basicDetails.medicalCompliance==false">No</td>
+                                        <td class="detailsAttributeValue medicationValue" ng-if="basicDetails.medicalCompliance==true">Yes</td>
+                                    </tr>
+                                </table>
+                                <img src="assets/images/not-compliant-row-legend.png" class="compliant_status" ng-if="basicDetails.medicalCompliance==false" />
+
+                            </td>
+                        </tr>
+
+                    </table>
+
+                </div>
+                <div class="accordionsContainer">
+                    <div class="allergyDetailsContainer" data-toggle="modal" data-target="#myModal6">
+
+                        <p class="accordionAllergyData">
+                         
+                            {{allergiesData[0].allergiesType1}}
+                        </p>
+                        <span class="glyphicon glyphicon-chevron-right accordionsAllergyGlyphicon"></span>
+
+                    </div>
+
+                   
+                </div>
+                <div class="modal fade allergyModalMainDialog" id="myModal6" role="dialog">
+                    <div class="modal-dialog allergyModalDialog">
+
+                        <!-- Modal content-->
+                        <div class="modal-content modalContentPatientDetails allergyModalContent">
+                            <div class="modal-header allergyDetailsHeader">
+
+                                <h4 class="modal-title medicalConsltTitle">Patient Allergy List</h4>
+                               <button type="button" class="btn btn-default btnDismiss" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></button> 
+                                
+
+                            </div>
+                            <div class="modal-body medicalAllergyBody">
+                                <div class="medicalConsltDetails">
+                                    <div class="medicalConsltImageContainer" ng-bind-html="patientImageSource">
+
+                                        <img src="assets/images/profilepic.png" class="medicalConsltPatientImg" />
+
+                                    </div>
+                                    <div class="medicalConsltAllergyPatientName">
+                                        {{patientData.patientDemographicsData.name}}
+                                    </div>
+                                    <div class="medicalConsltBasicsContainer">
+                                        <table class="medicalConsltBasicsTable">
+
+                                            <tr>
+                                                <td class="medicalConsltAttributeName ageColumn">Age:</td>
+                                                <td class="medicalConsltAttributeName dobColumn">Date of Birth:</td>
+                                                <td class="medicalConsltAttributeName idColumn">ID Number:</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="medicalConsltAttributeValue ageColumn">{{patientData.patientBasicData.age}}</td>
+                                                <td class="medicalConsltAttributeValue dobColumn">{{patientData.patientDemographicsData.dob}}</td>
+                                                <td class="medicalConsltAttributeValue idColumn">{{patientData.patientBasicData.IDNumber}}</td>
+                                            </tr>
+
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <div class="observationBody" style="padding-bottom: 10px; overflow-y: auto; height: 192px;">
+                                   <div class="updateStatus">Last update: {{lastUpdateTime}}</div> 
+                                    <table class="observationBodyTable" style=" width: calc(100% - 23px);">
+                                        <tbody>
+                                            <tr ng-repeat="allergy in allergiesData" style="vertical-align: top;">
+                                                <td class="observationBodyRow">{{allergy.allergiesType1}}</td>
+                                                <td class="observationBodyRow">{{allergy.allergiesType2}}</td>
+                                            </tr>
+                                           
+                                        </tbody>
+                                    </table>
+                                  
+                                </div>
+                               
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div data-ng-include="menuSelectedHeader.path" id="tabsAndContents">
+
+            </div>
+
+
+        </div>
+
+        <div class="menuBar">
+            <ul class="menuUL">
+                <li class="menuListItem" ng-style="patientMedicalHistoryStyleClass" ng-click="onMenuBarClicked('medicalHistory')" ng-bind-html="currentMedicalHistoryImage"></li>
+                <li class="menuListItem" ng-style="patientMedicationStyleClass" ng-click="onMenuBarClicked('medication')" ng-bind-html="medicationImage"></li>
+                <li class="menuListItem" ng-style="patientLaboratoryStyleClass" ng-click="onMenuBarClicked('laboratory')" ng-bind-html="laboratoryImage"></li>
+                <li class="menuListItem" ng-style="patientObservationStyleClass" ng-click="onMenuBarClicked('observation')" ng-bind-html="observationsImage"></li>
+                <li class="menuListItem" ng-style="patientTimelineStyleClass" ng-click="onMenuBarClicked('timeline')" ng-bind-html="timelinesImage"></li>
+                <li class="menuListItem" ng-style="patientMedicalConsultationStyleClass" ng-click="onMenuBarClicked('medicalConsultation')" ng-bind-html="medicalConsultationImage"></li>
+                <li class="menuListItem" ng-style="patientMedicalChartsStyleClass" ng-click="onMenuBarClicked('medicalCharts')" ng-bind-html="medicalChartsImage"></li>
+             
+                 <li class="menuListItem" ng-style="patientOtherStyleClass" ng-click="onMenuBarClicked('other')" ng-bind-html="othersImage"></li>
+            </ul>
+
+        </div>
+
+</div>
+
+
+           

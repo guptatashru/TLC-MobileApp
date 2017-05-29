@@ -1,0 +1,4 @@
+MainPackage=C:\Users\raovars\cordovaProjects\hello12\TeleHealthCare-TLC-Branch\platforms\windows\build\windows\Debug\x86\CordovaApp.Windows_0.0.1.14_Bundle\CordovaApp.Windows_0.0.1.14_x86_Debug.appx
+SymbolPackage=C:\Users\raovars\cordovaProjects\hello12\TeleHealthCare-TLC-Branch\platforms\windows\AppPackages\CordovaApp.Windows_0.0.1.14_Debug_Test\CordovaApp.Windows_0.0.1.14_x86_Debug.appxsym
+ResourcePack=C:\Users\raovars\cordovaProjects\hello12\TeleHealthCare-TLC-Branch\platforms\windows\build\windows\Debug\x86\CordovaApp.Windows_0.0.1.14_Bundle\CordovaApp.Windows_0.0.1.14_scale-140.appx
+ResourcePack=C:\Users\raovars\cordovaProjects\hello12\TeleHealthCare-TLC-Branch\platforms\windows\build\windows\Debug\x86\CordovaApp.Windows_0.0.1.14_Bundle\CordovaApp.Windows_0.0.1.14_scale-180.appx

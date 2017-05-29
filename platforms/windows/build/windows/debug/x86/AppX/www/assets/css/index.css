@@ -1,0 +1,6461 @@
+
+
+* {
+-webkit-tap-highlight-color: rgba(0,0,0,0); 
+}
+
+/*::-webkit-scrollbar { 
+    display: none; 
+}*/
+
+@font-face 
+{
+    font-family: MetricWebBlack;
+    src: url(../fonts/MetricWeb-Black.woff);
+}
+
+
+@font-face 
+{
+    font-family: MetricWebBold;
+    src: url(../fonts/MetricWeb-Bold.woff);
+}
+
+@font-face
+{
+    font-family: MetricWebLight;
+    src: url(../fonts/MetricWeb-Light.woff);
+}
+
+@font-face 
+{
+    font-family: MetricWebMedium;
+    src: url(../fonts/MetricWeb-Medium.woff);
+}
+
+@font-face 
+{
+    font-family: MetricWebRegular;
+    src: url(../fonts/MetricWeb-Regular.woff);
+}
+
+
+@font-face 
+{
+    font-family: MetricWebThin;
+    src: url(../fonts/MetricWeb-Thin.woff);
+}
+
+html 
+{
+    
+    height: 100%;
+    width: 100%;
+    -ms-content-zooming: none;
+    -ms-touch-action: pan-x pan-y;
+    
+}
+
+
+body 
+{
+    background-color: black;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+   
+}
+
+.generalPageContainers
+{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
+p{
+    text-align: center;
+    font-size:100%;
+   
+}
+
+
+#app 
+{
+   
+    height: 100%;
+    width: 100%;
+  
+
+}
+
+#pageView 
+{
+
+    height: 100%;
+    width: 100%;
+}
+
+.loadingGifContainer
+{
+position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url("../images/ajax_loader.gif") 50% 50% no-repeat rgb(249,249,249);
+    display:block;
+    opacity:0.4;
+
+}
+
+
+
+
+
+
+
+
+input label
+{
+top:15%;
+font-size:90%;
+   
+}
+    
+
+.lbl                                          
+ {
+  color:#00AA84;
+  font-size: 100%;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left: 5%;
+  top: 32%;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+
+.highlight 
+{
+  position:absolute;
+  height:60%; 
+  width:100px; 
+  top:25%; 
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+@-webkit-keyframes inputHighlighter
+{
+  from { background:#5264AE; }
+  to  { width:0; background:transparent; }
+}
+    
+@-moz-keyframes inputHighlighter 
+{
+  from { background:#5264AE; }
+  to   { width:0; background:transparent; }
+}
+    
+    
+@keyframes inputHighlighter 
+{
+  from { background:#5264AE; }
+  to  { width:0; background:transparent; }
+}
+
+
+
+  #loginPage 
+{
+    background-color:#E6E6E6;     
+    height: 100%;
+    width: 100%;
+                font-family:MetricWebRegular;
+   
+                
+}
+
+
+.loginPageHeader
+{
+    height: 25%;
+    
+}
+
+.loginPageBody
+{
+    height: 55%;
+   
+}
+
+
+
+.loginPageFooter
+{
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+    height:20%;
+                width: 100%;
+    overflow: hidden;
+}
+
+
+
+.loginMenu
+{
+                
+    background-color: white;
+    width: 25%;
+    margin-left: 16%;
+    border-radius: 6px;
+    position: relative;
+    float: left;
+    box-shadow: 0 0 27px 10px #D9D9D9;
+    padding-bottom: 2%;
+}
+    
+.grp_username{
+    
+    margin-left: 18%;
+    position: relative;
+    
+}
+    
+.grp_password{
+    
+    margin-left: 18%;
+    position: relative;
+
+}
+    
+.grp_username input, .grp_password input {
+  color: black;
+    margin-top: 6%;
+    /*padding-top: 9%;*/
+    padding-top:19px;
+    width: 79%;
+    height: 58px;
+    padding-left: 4%;
+    font-size: 17px;
+    border: 1px solid #b3b3b3;
+}
+    
+.loginMessageText   
+{
+    text-align: center;
+    font-size: 1em;
+}
+    
+.loginMessage
+{
+    margin-top: 11%;
+    font-size: 158%;
+    position: relative;
+    font-weight: bold;
+}
+                
+
+.bannerClass
+{
+    margin-top: 7%;
+    margin-left: 17%;
+    display: inline-block;
+    float: left;
+}
+    
+    
+ .bannerTitle
+{
+    font-size: 170%;
+    color: #00AA84;
+    font-family: MetricWebLight;
+    line-height: 1.4;
+    display: block;
+    margin-bottom: 0px;
+                text-align: left;
+}
+    
+    
+ .bannerContent
+    
+{
+    font-size: 314%;
+    color: #333333;
+    line-height: 1.0;
+                text-align: left;
+    display: inline-block;
+                font-family:MetricWebThin;
+                font-weight: 600;
+} 
+
+  
+    
+.btnLogin
+{
+
+    width: 65%;
+    margin-left: 18%;    
+    margin-top: 9%;
+    border-radius: 0;
+    background-color: #00AA84;
+    color:white;
+    margin-bottom:30px;
+
+}
+
+.healthBold
+{
+   font-family:MetricWebBold;
+
+
+}
+
+.compliant_status{
+  /* margin-top: 10%;
+    margin-left: 7%;*/
+  /*float: left;
+    margin: 0;
+    height: 16px;
+    width: 16px;
+    margin-top: 10%;*/
+  height: 16px;
+    width: 16px;
+    float: right;
+    position: relative;
+    left: -6%;
+    /* top: 5px; */
+    margin-top: 10.5%;
+    color: black;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary
+{
+  display: block
+}
+
+audio,
+canvas,
+progress,
+video
+{
+  display: inline-block;
+  vertical-align: baseline
+}
+
+/*medicalHistory*/
+.medicalHistoryDetailsContainer{
+    width:100%;
+    height:100%;
+    overflow-y:auto;
+    
+    padding-bottom: 25px;
+}
+.medicalHistoryClass{
+    border-bottom:1px solid black;
+    width: 100%;
+        display: inline-block;
+}
+.historyCategoryHeadingDiv{
+    border-bottom: 1px solid gray;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    width: 100%;
+}
+.historyCategoryHeading{
+    text-align: left;
+    margin-left: 20px;
+    font-weight: bold;
+    color: #00A982;
+    font-size: 105%;
+}
+
+.historyDetails{
+    display: table;
+    margin-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #cccccc;
+    width: calc(100% - 20px);
+}
+.issueName{
+        display: table-cell;
+    text-align: left;
+  
+    vertical-align: middle;
+    font-size: 120%;
+    font-weight: bolder;
+}
+.dateDetails{
+    text-align: right;
+    display: table-cell;
+    vertical-align: middle;
+    float: right;
+    margin-right: 20px;
+
+}
+
+.dateHeading{
+    color: gray;
+    font-weight: bold;
+}
+.dateData{
+    font-size: 115%;
+    font-weight: bold;
+}
+
+.familyHistoryDiv{
+        padding-top: 5px;
+    width: 33.3%;
+    float: left;
+    border-right: 1px solid #cccccc;
+    padding-bottom: 5px;
+        border-bottom: 1px solid #cccccc;
+}
+.familyHistoryTable{
+        width: 100%;
+    text-align: center;
+}
+.diseaseName{
+font-size: 125%;
+}
+.relation{
+    color: #b3b3b3;
+    font-weight: bolder;
+}
+.extraPadding{
+
+        padding-bottom: 12px;
+    padding-top: 12px;
+}
+/*dialog medicalConslt*/
+.medicalConsltHeader
+{
+
+    background-color: #00AA84;
+    color:white ;
+   
+   
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+        height: 46px;
+}
+.medicalConsltBasicsTable
+{
+    width:100%;
+}
+.medicalConsltAttributeName
+{
+        color: #b3b3b3;
+    font-size: 96%;
+    font-weight: bold;
+}
+.medicalConsltAttributeValue
+{
+    color: #333333;
+    font-size: 106%;
+    font-weight: bold;
+
+}
+.medicalConsltBasicsContainer
+{
+    
+    width: 55%;
+    float: left;
+   
+}
+.medicalConsltDetails
+{
+    height: 82px;
+    /*padding-left: 11px;*/
+    background-color: #F2F2F2;
+    padding-left: 19px;
+}
+.medicalConsltBody
+{
+    width: 100%;
+ 
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+        height: calc(100% - 46px);
+}
+.medicalConsltPatientName
+{
+   
+    float: left;
+    color: #333333;
+     padding-top: 2px;
+   width:60%;
+    font-size: 128%;
+    font-weight: bold;
+    font-family: MetricWebBold;
+}
+.btnMedicalConsltCancel
+{
+    border-color: black;
+    
+    border-radius: 0px;
+    color: black;
+    width: 92px;
+}
+.medicalConsltTitle
+{
+    padding-left:9px;
+}
+.btnMedicalConsltSave
+{
+     border-color: transparent;
+    
+    border-radius: 0px;
+    color: white;
+    width: 92px;
+    background-color:#00AA84;
+}
+.medicalConsltPatientImg
+{
+    /*width: 65%;
+  
+    padding-top: -1%;
+    margin-left: 2px;
+        margin-top: 9px;*/
+        border-radius: 50%;
+    width: 47px;
+    height: 47px;
+    margin-top: 3px;
+    margin-left: 3px;
+    border: 1px solid #b3b3b3;
+
+
+
+}
+.medicalAllergyBody{
+        width: 100%;
+    /*height: 292px;*/
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    height: 274px;
+}
+
+.medicalConsltFooter
+{
+    text-align: center;
+    padding-top: 3px;
+    border-top: none;
+
+}
+.medicalConsltTxtArea
+{
+   padding-left: 13px;
+    padding-right: 13px;
+    padding-top: 13px;
+
+    height: 227px;
+
+
+}
+.medicalConsltImageContainer
+{
+    /*width: 15%;*/
+    float: left;
+
+
+    border: 1px solid #b3b3b3;
+    border-radius: 50%;
+    margin-top: 11px;
+    height: 55px;
+    width: 55px;
+    margin-right: 4%;
+}
+.modalContent
+{
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+    
+    height: 418px;
+    
+   
+        border-radius: 0;
+}
+/*allergyDialog*/
+.allergyDetailsHeader
+{
+
+    background-color: #EA384E;
+    color:white ;
+   
+   
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+        height: 46px;
+}
+.medicalConsltAllergyPatientName
+{
+    float: left;
+    color: #333333;
+    padding-top: 2px;
+    width: 85%;
+    font-size: 128%;
+    font-weight: bold;
+    font-family: MetricWebBold;
+}
+.updateStatus{
+    margin-left: 23px;
+    font-size: 115%;
+    /* padding-top: 2px; */
+    margin-top: 11px;
+    color: #FF8974;
+    font-weight: bold;
+}
+.observationBodyRow
+{
+    width:50%;
+}
+    
+.observationBodyTable
+{
+   margin-top: 10px;
+    margin-left: 21px;
+    font-size: 123%;
+    font-weight: bold;
+   
+}
+.modalContentPatientDetails
+{width: 96%;
+    /* height: 108%; */
+    margin-left: 2%;
+    margin-right: 1%;
+    /*margin-top: 348px;*/
+        margin-top: 300px;
+    border-radius: 0;
+        /*margin-top: 45%;*/
+}
+.btnDismiss{
+ height: 45px;
+    position: relative;
+    color: white;
+    FLOAT: RIGHT;
+    MARGIN-TOP: -36PX;
+    FONT-SIZE: 145%;
+    MARGIN-RIGHT: -10PX;
+    background: #EA6985;
+    border-radius: 0;
+    border-color: transparent;
+}
+
+
+
+.btnDismiss:hover, .btnDismiss:focus, .btnDismiss:active, .btnDismiss.active, .open .dropdown-toggle.btnDismiss {
+    color: white;
+    background-color: #EA6985;
+    border-color:transparent;
+}
+
+
+
+.btnDismissMedicalConslt
+{position: relative;
+    color: white;
+    FLOAT: RIGHT;
+    MARGIN-TOP: -36PX;
+    FONT-SIZE: 145%;
+    MARGIN-RIGHT: -10PX;
+    background: #19B98B;
+    border: transparent;
+    border-radius: 0;
+    height: 45px;
+
+}
+
+.btnDismissMedicalConslt:hover, .btnDismissMedicalConslt:focus, .btnDismissMedicalConslt:active, .btnDismissMedicalConslt.active, .open .dropdown-toggle.btnDismissMedicalConslt {
+    color: white;
+    background-color: #19B98B;
+    border-color:transparent;
+}
+
+
+
+/*laboratory dialog*/
+.modalContentLaboratory
+{
+   
+    width: 96%;
+    margin-right: 1%;
+    margin-left: 2%;
+    /* margin-left: 67px; */
+   
+    /*overflow-y: scroll;*/
+    border-radius: 0;
+        height: 100%;
+    margin-top: 0;
+}
+/*observation dialog*/
+
+
+.observationBody
+{
+
+}
+.observationData
+
+{
+    margin-top: 249px;
+    margin-left: 35px;
+    padding-top: 12px;
+    font-size: 111%;
+    color: #b3b3b3;
+    font-weight: bold;
+}
+.observationAdditionalDetailsTable
+{
+    float: left;
+    width: 100%;
+    height:254px;
+}
+.medicalConsltDetailsAttributeValue
+{
+    color: #333333;
+    font-size: 158%;
+   
+}
+
+.medicalConsltDetailsAttributeName
+{
+    color: #00AA84;
+    font-size: 96%;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.medicalConsultationContainer{
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    padding-bottom: 30px;
+}
+.medicalNoteHeading
+    {
+
+   padding-top: 10px;
+    font-size: 100%;
+    color: #00AA84;
+  
+    font-weight: bold;
+    }
+    .medicalConsultationPage
+  {     font-weight: bold;
+        height: 100%;
+    width: calc(100% - 30px);
+      margin-left: 15px;
+    margin-top: 15px;
+
+    }
+    .detailsAttributeBody
+  
+    {
+        font-size:112%;
+    }
+    .medicalConsultNotes
+    {
+            width: 100%;
+    float: left;
+        font-size:113%;
+    }
+    .notesAlign
+    {
+        text-align:left;
+
+    }
+   
+
+    .buttonsContainer{
+        float: right;
+        padding-top: 2px;
+    }
+    .editBtn{
+        border-radius: 20px;
+   width: 90px;
+    margin-right: 15px;
+    color: #617A77;
+    border: 1px solid #617A77;
+    }
+    .addBtn{
+         border-radius: 20px;
+    width: 110px;
+    border: 1px solid #FE8E69;
+    color: #FE8E69;
+    }
+    .myGlyphicon{
+        margin-right: 8px;
+font-size: 101%;
+    }
+    .consultationTable{
+           width: 50%;
+    float: left;
+    }
+
+
+
+   /*timeline*/
+   .listViewBtn{
+       margin-right:7px;
+   }
+
+          .timelineDetailsPage
+   {
+       font-size: 150%;
+    margin-left: 13px;
+    color: #00A982;
+        margin-top: 12px;
+            display: inline-block;
+            padding-bottom: 30px;
+   }
+    .listAndCalendarButtons{
+float: right;
+    margin-top: 20px;
+    margin-right: 20px;
+    }
+    .list_listViewBtn{
+        margin-right: 8px;
+    height: 45px;
+    color: white;
+    background-color: #425563;
+    }
+    .list_calendarViewBtn{
+        height: 45px;
+        color: #B3B3B3;
+        background-color: transparent;
+           border-color: #B3B3B3;
+    }
+
+    
+
+    .timelineGlyphicon{
+        font-size: 150%;
+    }
+   .timelineCategoryHeading
+   {
+       text-align: left;
+    margin-left: 20px;
+    font-weight: bold;
+    color: #b3b3b3;
+    font-size: 105%;
+   }
+   .timelineChevron{
+
+   display: table-cell;
+    vertical-align: middle;
+    font-size: 143%;
+    text-align: right;
+    right:15px;
+   }
+
+   .timelineDataDetails{
+    display: table;
+    margin-left: 20px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid #cccccc;
+    width: calc(100% - 20px);
+}
+   /*timeline calendar view page*/
+
+   .timelineCalendarDetailsContainer{
+       height:100%;
+       width:100%;
+     
+       padding-bottom:20px;
+       background-color:#F2F2F2;
+           overflow-x: hidden;
+   }
+   .cal_listViewBtn{
+          margin-right: 8px;
+    height: 45px;
+      color: #B3B3B3;
+        background-color: transparent;
+           border-color: #B3B3B3;
+           /*background:url("../images/list-inactive.png") no-repeat center center;*/
+}
+    
+    .cal_calendarViewBtn{
+            height: 45px;
+             color: white;
+    background-color: #425563;
+     /*background:url("../images/calendar-active.png") no-repeat center center;*/
+    }
+
+    .dateAndIssueContainer{
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    margin-left: 20px;
+    width: 100%;
+     -ms-overflow-style: -ms-autohiding-scrollbar;
+     padding-bottom: 20px;
+    }
+
+
+.no-scroll::-webkit-scrollbar {display:none;}
+.no-scroll::-moz-scrollbar {display:none;}
+.no-scroll::-o-scrollbar {display:none;}
+.no-scroll::-google-ms-scrollbar {display:none;}
+.no-scroll::-khtml-scrollbar {display:none;}
+
+    .dateContainer{
+    width: calc(400px + 1025px);
+    display: table;
+    }
+    .weekDayTable{
+  /*width: 100px;*/
+  width:202px;
+    float: left;
+    /*text-align: center;*/
+    }
+
+    .dayName{
+            font-weight: bold;
+      color: #b3b3b3;
+    }
+    .dateRow{
+            font-size: 125%;
+    font-weight: bold;
+    color:#857D7B;
+    }
+
+    .timelineDateData{
+ color:#857D7B;
+    }
+    .horizontalLine{
+   width: 100px;
+    float: left;
+    border-top: 1px solid #cccccc;
+    }
+    .issueContainer{
+        margin-top: 19px;
+    /*width: calc(400px + 405px);*/
+    width: calc(400px + 1025px);
+    display: inline-block;
+    }
+    .issueHolderDiv{
+        background-color: white;
+    border: 1px solid #cccccc;
+    width: 161px;
+    margin-right: 40px;
+    float: left;
+    display: inline-block;
+    }
+    .eachIssue{
+        font-weight: bold;
+    font-size: 120%;
+    border-bottom: 1px solid #cccccc;
+    display: table;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    /* padding-right: 10px; */
+    width: 100%;
+    }
+    .eachIssueName{
+        text-align: left;
+    }
+
+
+
+   /*medication*/
+.medicationDetailsContainer{
+        width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+    padding-bottom: 20px;
+}
+
+      .medicationHeading
+   {
+    width: 100%;
+    padding-left: 10px;
+    height: 85px;
+    border-bottom: 1px solid #445461;
+   }
+
+   .medicationTableHead
+   {
+       font-size: 110%;
+    color: #b3b3b3;
+   }
+   .medicationtHead{
+       width: 100%;
+   }
+   .medicationtBody{
+       width: 100%;
+   }
+   .medicationDropdown{
+           width: 35%;
+   }
+   .medicationInputTextBox{
+    width: 30%;
+   }
+   .medicationGlyphicons{
+       width: 33%;
+   }
+   .status_glyphicons{
+       text-align: center;
+    width: 100%;
+    font-size: 77%;
+   }
+   .status_glyphicons td{
+       vertical-align: bottom;
+       width:25%;
+   }
+   .medDropdownDiv{
+      width:100%;
+   }
+   .btnMedDropdownUL{
+           width: 90%!important;
+               text-align: center;
+               height:200px;
+               overflow-y:scroll;
+   }
+   .med_status{
+      
+       /*margin-right: 6%;*/
+   }
+.med_status_glyphs{
+       width: 10%; float: right; padding-right: 2%; text-align: right;
+   }
+   .stat_Glyph{
+       float: left; margin-right: 7%;
+   }
+   .lastGlyph{
+       margin-right:0%;
+   }
+   
+   .sortByBtn{
+       font-size: 100%;
+    width: 94%;                          /*change made*/
+    background-color: white;
+    border-radius: 0;
+    /* text-align: left; */
+    border-color: #cccccc;
+    color: black;
+    /* display: table; */
+    height: 44px;
+   }
+   .sortByBtnCaret{
+      margin-left: 2%!important;
+   }
+   .glyphicon-minus:before {
+    content: "\2212";
+    vertical-align: middle!important;
+}
+.glyphicon-plus:before {
+    content: "\2b";
+     vertical-align: middle!important;
+     top: 1px;
+    position: relative;
+}
+.status_icons{
+    margin-right:12%;
+}
+
+   .medicationFilterTextBox{
+           width: 90%;
+       height: 44px;
+    border-radius: 0;
+   }
+   .medicationTableBody
+{
+        font-size: 113%;
+    color: black;
+    font-weight:bold;
+
+   }
+   .medicationHeadingTable
+   {
+  width: 100%;
+   
+    padding-left: 10px;
+    margin-top: 15px;
+   }
+
+   .medicationHeadingTableHead
+  
+   {
+       /*width:30%;*/
+   }
+   .btnExpand
+      {
+       float:left;
+             margin-right: 2%;
+    width: 23px;
+    padding: 0;
+    font-weight: 100!important;
+    color: #cccccc;
+    background-color: white;
+     font-size: 12px; 
+    height: 23px;
+    border-radius: 0;
+    border-width: 2px;
+    /*margin-top: 1px;*/
+
+   }
+   .genericNameHeadingGly{
+        margin-right: 2%;
+           width: 21px;
+    padding: 0;
+    font-weight: 100!important;
+    color: white;
+    background-color: #445461;
+   font-size: 12px;
+    height: 21px;
+    border-radius: 0;
+  
+    float: left;
+   
+  
+   }
+   .medicationTable{
+       display: inline-block;
+    /* padding-top: 10px; */
+    /*padding-left: 7px;*/
+    width: 100%;
+    height: calc(100% - 85px);
+   }
+   .medicinesContainer{
+           overflow-y: auto;
+    height: 90%;
+    padding-bottom: 20px;
+   }
+   .medicationTableHeadingRow{
+      display: inline-block;
+    width: 100%;
+    border-bottom: 1px solid gray;
+    padding-bottom: 9px;
+    padding-top: 9px;
+    padding-left: 10px;
+  }
+
+  .genNameHead{
+      color: gray;
+    font-weight: bold;
+     float: left; 
+    width: 31%;
+    text-align: left;
+    /*display: table-cell;
+    vertical-align: middle;*/
+  }
+  .drugNameHead{
+      color: gray;
+    font-weight: bold;
+    text-align: left;
+     float: left; 
+    width: 34%;
+    /*display: table-cell;
+    vertical-align: middle;*/
+  }
+  .dosageHead{
+      /*display: table-cell;
+    vertical-align: middle;*/
+     float: left; 
+    width: 17%;
+    text-align: left;
+    color: gray;
+    font-weight: bold;
+  }
+  .legendPlaceHolder{
+  text-align: left;
+  float:left;
+    /*display: table-cell;
+    vertical-align: middle;*/
+  width:10%;
+    color: gray;
+    font-weight: bold;
+  }
+  /*  */
+  .singleMedRow{
+            /*display: table;*/
+    width: 100%;
+    border-bottom: 1px solid #cccccc;
+    padding-left: 10px;
+    
+  }
+  .medicineDetailsRow{
+      padding-bottom: 9px;
+    padding-top: 9px;
+    display: table;
+    width: 100%;
+  }
+  .displayDetails{
+     
+    display: none;
+    float: left;
+    width: 100%;
+    
+  }
+  .startDurationMethodDiv{
+      border-bottom: 1px solid #cccccc;
+    display: table;
+    width: calc(100% - 26px);
+    /* width: calc(100% - 0px); */
+    /* padding-bottom: 9px; */
+    /* padding-top: 9px; */
+    margin-left: 25px;
+  }
+  .leftAlign{
+      text-align:left;
+  }
+  .startClass{
+          padding-bottom: 9px;
+    padding-top: 9px;
+    float: left;
+    width: 33%;
+    border-right: 1px solid #cccccc;
+  }
+  .detailTitle{
+          font-size: 113%;
+   color: #b3b3b3;
+    font-weight: bold;
+  }
+
+  .detailVal{
+      font-size: 120%;
+    padding-left: 8px;
+    color: black;
+  }
+  .durationClass{
+      padding-left: 9px;
+    padding-bottom: 9px;
+    padding-top: 9px;
+    float: left;
+    width: 33%;
+    border-right: 1px solid #cccccc;
+  }
+  .methodClass{
+      padding-left: 9px;
+    padding-bottom: 9px;
+    padding-top: 9px;
+    float: left;
+    width: 33%;
+  }
+  .directionPNRMedDiv{
+border-bottom: 1px solid #cccccc;
+    display: table;
+    width: calc(100% - 26px);
+    /* width: calc(100% - 0px); */
+    /* padding-bottom: 9px; */
+    /* padding-top: 9px; */
+    margin-left: 25px;
+  }
+  .directionClass{
+      padding-bottom: 9px;
+    padding-top: 9px;
+    float: left;
+    width: 66%;
+    border-right: 1px solid #cccccc;
+  }
+  .PNRMedicationClass{
+          padding-bottom: 9px;
+    padding-top: 9px;
+    float: left;
+    width: 33%;
+    padding-left: 9px;
+  }
+  .timesOfDayDiv{
+border-bottom: 1px solid #cccccc;
+    display: inline-block;
+    width: calc(100% - 26px);
+    /* width: calc(100% - 0px); */
+    padding-bottom: 9px;
+    padding-top: 9px;
+    margin-left: 25px;
+  }
+  .timesOfDay{
+      float: left;
+  }
+  .timeIndicator{
+     margin-left: 3%;
+    float: left;
+    color: gray;
+    padding: 1px 1% 1px 1%;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+  }
+
+
+
+
+
+
+.genName{
+        color: black;
+    font-weight: bold;
+     float: left; 
+    width: 31%;
+    text-align: left;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 115%;
+    word-break:break-all;
+    margin-right:5px;
+}
+.drugName{
+        color: black;
+        font-size: 115%;
+    font-weight: bold;
+    text-align: left;
+     float: left; 
+    width: 34%;
+    display: table-cell;
+    vertical-align: middle;
+    word-break: break-word;
+}
+.dosage{
+       display: table-cell;
+    vertical-align: middle;
+     float: left; 
+    width: 17%;
+    text-align: left;
+    color: black;
+    font-weight: bold;
+    font-size: 115%;
+}
+.glyphiconFullHeightWidth{
+        width: 100%;
+    height: 100%;
+    top:-1px;
+   
+}
+.tableHeadLab
+{
+    font-weight:bold;
+    font-family: MetricWebBlack;
+}
+
+.labBasicsContainer
+{
+    width:53%;
+    float:left;
+}
+
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>.hgb{
+    padding:4px;
+}
+
+
+.dateOfTestRow{
+    text-align: left;
+    font-size: 100%;
+    font-weight: bold;
+}
+
+.dateImported{
+    text-align: left;
+    font-size: 100%;
+    font-weight: bold;
+    padding-bottom: 4px;
+}
+
+.labTableDetails
+{
+    margin-top:20px;
+    font-size:118%;
+}
+
+.labTable1{
+font-weight: bold;
+    font-size: 95%;
+    margin-right: 6px;
+    float: left;
+    width: 34%;
+}
+.labTable2{
+  font-size: 95%;
+    float: left;
+    /* margin-left: 11px; */
+    width: 28%;
+    margin-right: 9px;
+    font-weight: bold;
+}
+.labTable3{
+    margin-left: 11px;
+    width: 35%;
+    font-size: 95%;
+    font-weight: bold;
+}
+
+.medicalVitalsBody{
+        width: 100%;
+       height: 372px;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+}
+.vitalsObsvBody{
+        height: 225px;
+}
+.obsvReadingsTable{
+    float: left;
+    width: 100%;
+    height:100%;
+}
+.vitalsObsvRow{
+    height: 33%;
+}
+
+.vitalsObsvCol{
+    width:33%;
+}
+.vitalsRecordData{
+    margin-left: 22px;
+    padding-top: 19px;
+    font-size: 111%;
+    color: #b3b3b3;
+    font-weight: bold;
+    margin-top:0;
+}
+
+
+
+.sequenceData
+{
+    width:15%;
+}
+.mrnData
+{
+
+}
+.clinicalData
+{
+
+}
+.labDetailsAreaContainer
+{
+    margin-left: 21px;
+    margin-top: 10px;
+    overflow-y: scroll;
+  
+    height: calc(100% - 92px);
+}
+.hospitalName{
+    text-align: left;
+    font-size: 150%;
+}
+.labTable
+{
+    font-size: 106%;
+    font-weight: bold;
+    width: 100%;
+}
+   .laboratoryDetailsContainer{
+    width:100%;
+    height:100%;
+    overflow-y:auto;
+    padding-bottom: 20px;
+}
+.observationDetailsContainer{
+    width:100%;
+    height:100%;
+    overflow-y:auto;
+    padding-bottom: 20px;
+}
+.obsvChevron{
+        display: table-cell;
+    vertical-align: middle;
+    font-size: 143%;
+    text-align: right;
+}
+.generalHeading{
+    color: #00A982;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.header{
+        text-align: left;
+    margin-left: 20px;
+    font-size: 150%;
+}
+.singleRecordingContainer{
+    border: 1px solid #cccccc;
+    margin-left: 20px;
+    width: calc(100% - 40px);
+    display: table;
+    padding: 10px 13px 10px 13px;
+    margin-bottom: 20px;
+}
+.obsType{
+    display: table-cell;
+    vertical-align: middle;
+    margin-left: 20px;
+    width: 38%;
+}
+.obsDate{
+    width: 35%;
+    display: table-cell;
+    vertical-align: middle;
+}
+.noResults{
+    color:#b3b3b3;
+    text-align:right;
+    display:table-cell;
+    vertical-align:middle;
+}
+.detailType{
+        color: #b3b3b3;
+    font-weight: bold;
+}
+
+.detailTypeVal{
+    font-size: 120%;
+    font-weight: bold;
+}
+
+
+
+audio:not([controls])
+{
+  display: none;
+  height: 0
+}
+
+[hidden],
+template 
+{
+  display: none
+}
+
+a 
+{
+  background: transparent
+}
+
+a:active,
+a:hover
+{
+  outline: 0
+}
+
+abbr[title] 
+{
+  border-bottom: 1px dotted
+}
+
+b,
+strong 
+{
+  font-weight: bold
+}
+
+dfn 
+{
+  font-style: italic
+}
+
+h1 
+{
+  font-size: 2em;
+  margin: 0.67em 0
+}
+
+mark 
+{
+  background: #ff0;
+  color: #000
+}
+
+small
+{
+  font-size: 80%
+}
+
+sub,
+sup 
+{
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline
+}
+
+sup
+{
+  top: -0.5em
+}
+
+sub 
+{
+  bottom: -0.25em
+}
+
+img
+{
+  border: 0
+}
+
+svg:not(:root)
+{
+  overflow: hidden
+}
+
+figure
+{
+  margin: 1em 40px
+}
+
+hr
+{
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0
+}
+
+pre 
+{
+  overflow: auto
+}
+
+code,
+kbd,
+pre,
+samp
+{
+  font-family: monospace, monospace;
+  font-size: 1em
+}
+
+button,
+input,
+optgroup,
+select,
+textarea
+{
+  color: inherit;
+  font: inherit;
+  margin: 0
+}
+
+button
+{
+  overflow: visible
+}
+
+button,
+select 
+{
+  text-transform: none
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"]
+{
+  -webkit-appearance: button;
+  cursor: pointer
+}
+.medicationHeadRow
+{
+    color:#b3b3b3;
+}
+button[disabled],
+html input[disabled]
+{
+  cursor: default
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner
+{
+  border: 0;
+  padding: 0
+}
+
+input 
+{
+  line-height: normal
+}
+
+input[type="checkbox"],
+input[type="radio"]
+{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button
+{
+  height: auto
+}
+
+input[type="search"] 
+{
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration 
+{
+  -webkit-appearance: none
+}
+
+fieldset 
+{
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em
+}
+
+legend
+{
+  border: 0;
+  padding: 0
+}
+
+textarea
+{
+  overflow: auto
+}
+
+optgroup 
+{
+  font-weight: bold
+}
+
+table 
+{
+  border-collapse: collapse;
+  border-spacing: 0
+}
+
+td,
+th 
+{
+  padding: 0
+}
+
+#patientSearchPage 
+{
+  margin: 0;
+    background-color:white;
+                background-size: cover;
+    height: 100%;
+    width: 100%;
+
+
+}
+
+h1 
+{
+  font-weight: normal;
+}
+
+h2
+{
+  font-size: 45px;
+  margin: 40px 80px 0 80px;
+  text-shadow: #222 3px 3px 0;
+  line-height: 65px;
+}
+
+h3 
+{
+  font-size: 30px;
+  margin: 30px 80px 0 80px;
+  text-align: right;
+  text-shadow: #222 3px 3px 0;
+}
+
+a ,a:hover
+{
+  text-decoration: none;
+}
+
+.patientSearchPagePageHeader
+{
+  left: 0;
+    height: 5%;
+    width: 100%;
+    position: relative;
+   
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: black;
+    font-family: SansPro;
+    background-color: #00A982;
+    transition: all 0.3s ease;
+    min-height:46px;
+}
+
+.patientSearchPagePageHeader a 
+{
+
+    position: absolute;
+    left: 14px;
+    top: 4px;
+    color: white;
+    font-size: 30px;
+    
+}
+   
+
+
+
+   
+.headderContentTable
+{
+    height: 100%;
+    width: 100%;
+}
+      
+.imageContainerDiv
+{
+    height: 100%;
+    width: 20%;
+}
+
+.floatLeft
+{
+    float: left;
+}
+      
+.textContainerDiv
+{
+    height: 100%;
+    width: 60%;
+}
+      
+.headderTextClass
+{
+    height: 100%;
+    width: 100%;
+    background-color: Transparent;
+                background-repeat:no-repeat;
+    border: none;
+    
+}
+
+   .searchPatientPageBody
+{
+     height: 95%;
+    font-family: SansPro;
+     width: 100%;
+    padding-top: 0;
+   
+    overflow: hidden;
+       transition: all 0.3s ease;
+  }
+      
+      
+ .patientSearchUtils
+{
+    overflow-x:auto;
+
+    height: 100%;
+font-family: SansPro;
+}
+
+
+.patientSearchPageFooter
+{
+height:15%;
+transition: all 0.3s ease;   
+    
+}
+    
+.patientSearch-utils-spacing
+    {
+                
+        height:100%;
+    }
+      
+      
+ .patientSearchRow
+    {
+        
+     height: 160px;
+    width: 100%;
+        
+    }
+    .patientSearchCol
+    {
+        
+    text-align: center;
+    padding-top: 62px !important;
+        
+    }
+      
+      
+       .searchLabel
+    {
+        
+     text-align: center;
+    padding-top: 32px;
+    color: white;
+    font-size: 150%;
+    }
+
+.btnPatient
+{
+    width: 100%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    background-color:#2A4455;
+    font-size: 219%;
+    color: white;
+    border-top-color: white;
+    border-bottom-color: white;
+    border-left-color: #4D687B;
+    border-bottom-style: solid;
+    border-bottom-width: 4px;
+    border-top-width: 0px;
+    border-right-color: #4D687B;
+    font-family: SansPro;
+    text-align: left;
+    text-indent: 3%;
+}
+
+.searchContent
+{
+height:39%;
+width:100%;
+background-color:#00A982;
+
+}
+.patientSearchTable
+    {
+        
+     width: 100%;
+    height: 390px;
+    }
+      
+      
+
+.page-wrap {
+  float: right;
+  width: 100%;
+  transition: width 0.3s ease;
+    overflow: hidden;
+    height:100%;
+}
+
+.main-nav
+{
+  position: fixed;
+  top: 0;
+  width: 0;
+  height: 100%;
+background: #425563;
+  overflow-y: auto;
+  transition: width 0.3s ease;
+  white-space: nowrap;
+    overflow-x: hidden;
+    
+ 
+}
+
+.main-nav ul li 
+{
+  display: block;
+
+  color: white;
+
+    list-style-type: none;
+    line-height: 74px;
+    padding-left: 29px;
+    font-family: MetricWebMedium;
+  
+    
+}
+      .main-nav ul{
+          
+          font-size: 130%;
+          padding-left:0;
+      }
+
+      /*.main-nav ul li:hover {
+          
+          background: #2F434E;
+          
+      }*/
+
+.main-nav:after 
+{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 4px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+}
+
+.close-menu {
+  display: none;
+}
+
+#main-nav:target {
+  width: 326px;
+}
+
+.openSideBar{
+    width: 326px;
+}
+.movePatientSearchScreen{
+    margin-left:326px;
+    overflow:hidden;
+
+}
+
+#main-nav:target + .page-wrap {
+
+    width: 100%;
+    /* left: 281px; */
+    overflow: hidden;
+}
+
+#main-nav:target + .page-wrap .close-menu {
+  display: block;
+}
+
+#main-nav:target + .page-wrap .patientSearchPagePageHeader ,#main-nav:target + .page-wrap .searchPatientPageBody,#main-nav:target + .page-wrap .patientSearchPageFooter {
+/*  width: 70%;*/
+/* left: 30%;*/
+    margin-left:326px;
+    overflow:hidden;
+    
+}
+
+
+
+
+    .notificationSymbolClass{
+          
+    background: transparent;
+    border: none;
+    float: right;    
+          
+          
+      }       
+       
+    .fa-2x {
+    font-size: 2em;
+    color: white;
+        padding: 14px;
+      }
+      
+      .sideBarGlyph{
+          
+          padding-right:21px;
+      }
+      
+      .sideBarText{
+          
+         font-size:130%; 
+          padding-left:6%;
+          
+      }
+      .sideBarLogoClass{
+          
+      position: absolute;
+    bottom: 5%;
+    left: 29px;    
+    display:none;
+      }
+#patientSearchPage{
+    background-color:white;
+                background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+
+.headderContentTable
+{
+    height: 100%;
+    width: 100%;
+}
+.floatLeft
+{
+    float: left;
+}
+
+.patientSearchUtils
+{overflow-x:auto;
+/* overflow-y:scroll;*/
+    height: 100%;
+    overflow-y:hidden;
+}
+
+
+.patientSearchPageFooter
+{
+height:15%;
+    
+    
+}
+    
+.patientSearch-utils-spacing
+    {
+        
+        
+        height:100%;
+}
+
+.detailsTable
+    {
+        
+        margin-top: 63px;
+    margin-left: -40px;
+    }
+
+
+.transparentButton
+{
+    background-color: Transparent;
+                background-repeat:no-repeat;
+    border: none;
+   
+}
+
+    .hpe_logo
+    {
+        
+        margin-left: 2%;
+    margin-top: 2%;
+    }
+
+
+    .imageContainerDiv
+{
+    height: 100%;
+    width: 20%;
+}
+
+    .floatLeft
+{
+    float: left;
+}
+.hpLogoClass
+{
+    height: 100%;
+    width: 100%;
+    background-color: Transparent;
+                background-repeat:no-repeat;
+    border: none;
+   
+}
+    .patientSearchRow
+    {
+        
+        height: 160px;
+  
+        
+    }
+    .patientSearchCol
+    {
+        
+     
+    padding-top: 62px !important;
+        
+    }
+   
+.textContainerDiv
+{
+    height: 100%;
+    width: 60%;
+}
+    .btnSearch
+    {
+        
+        
+    }
+.headderTextClass
+{
+    height: 100%;
+    width: 100%;
+    background-color: Transparent;
+                background-repeat:no-repeat;
+    border: none;
+    
+}
+    .pageTitles
+{
+    font-size: 140%;
+    margin-top: 7px;
+    color: white;
+    font-family: MetricWebMedium;
+}
+
+    .searchLabel
+    {
+        
+       
+        text-align: center;
+    padding-top: 0.5%;
+    color: white;
+    font-size: 140%;
+        font-family: MetricWebLight
+    }
+    .inputForms{
+
+            width: 100%;
+    /* height: 2%; */
+    /*height: 33%;*/
+    display: inline-block;
+    }
+    .searchInp
+    {
+        margin-left: 40%;
+    margin-top: 1%;
+        font-size:150%;
+    height: 60px;
+    width: 21%;
+    font-family:MetricWebMedium;
+    font-size: 150%;
+    float: left;
+    }
+        .newInp
+    {margin-left: 1%;
+    margin-top: 1%;
+   height: 60px;
+    width: 21%;
+       font-family:MetricWebMedium;
+       font-size: 150%;
+     float: left;       
+    }
+
+.searchButton {
+   display: inline-block;
+    height: auto;
+    width: 100%;
+}
+.displayTextBox {
+    display:none;
+}
+
+
+/*
+    multiple search  */
+
+
+.inputForms input{
+    padding-left:10px;
+}
+
+.btnAddParameterGlyphicon{
+
+    left: -3px;
+    top: -1px;
+}
+.searchParameterName{
+
+    color:#C7CCCF;
+    font-size:150%;
+    font-family:MetricWebMedium;
+    padding-left: 19px;
+    display: table-cell;
+    vertical-align: middle;
+}
+.thirdTextBox{
+    display:none;
+}
+.displayThirdTextBox{
+    margin-top: 24px;
+    margin-left: 40%;
+    /* margin-top: 1%; */
+    height: 60px;
+    width: 21%;
+    font-family: MetricWebMedium;
+    font-size: 150%;
+    float: left;
+}
+
+.displayModifiedThirdTextBox{
+     margin-top: 24px;
+    margin-left: 29%;
+    /* margin-top: 1%; */
+    height: 60px;
+    width: 21%;
+    font-family: MetricWebMedium;
+    font-size: 150%;
+    float: left;
+}
+.fourthTextBox{
+display:none;
+}
+.displayFourthTextBox{
+    margin-left: 1%;
+    margin-top: 24px;
+    height: 60px;
+    width: 21%;
+    font-family: MetricWebMedium;
+    font-size: 150%;
+    float: left;
+
+}
+
+.plusButtonDiv{
+    margin-top: 1%;
+    /*float: left;*/
+    margin-left: 11px;
+    position: relative;
+    /*height: 100%;*/
+    display: inline-block;
+    height: 60px;
+   
+
+}
+.searchParametersDiv{
+
+    background-color: #425563;
+     width: 250px;
+    right: 0;
+    top:65px;
+    /*width: 21%;
+    margin-left: calc(40% + 58px);*/
+    z-index: 2;
+    position: absolute;
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+.searchParametersOption{
+    list-style-type: none;
+    
+    padding: 0;
+   padding-left: 16px;
+}
+.addSearchParameterGlyphicon{
+       display: table-cell;
+    vertical-align: middle;
+    color: #C7CCCF;
+    font-size: 120%;
+    top: 0;
+}
+   .searchOption {
+       height: 60px;
+    display: table;
+    width:100%;
+   }
+    .addedInput{
+        margin-left: 29%;
+    margin-top: 1%;
+   height: 60px;
+    width: 21%;
+     font-family:MetricWebMedium;
+     font-size: 150%;
+     float: left;
+    }
+.btnPatient
+{
+    width: 100%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    background-color:#2A4455;
+    font-size: 219%;
+    color: white;
+    border-top-color: white;
+    border-bottom-color: white;
+    border-left-color: #4D687B;
+    border-bottom-style: solid;
+    border-bottom-width: 4px;
+    border-top-width: 0px;
+    border-right-color: #4D687B;
+    font-family: SansPro;
+    text-align: left;
+    text-indent: 3%;
+}
+
+.searchContent
+{
+/*height:35%;*/
+width:100%;
+background-color:#00A982;
+min-height:300px;
+    padding-top: 2.5%;
+    display:inline-block;
+    height:auto;
+}
+
+.patientSearchTable
+    {
+        
+        width: 100%;
+    /*height: 390px;*/
+        /*height:65%;*/
+        height:48%;
+        font-family: MetricWebMedium;
+        overflow-y:auto;
+    }
+
+.patientSearchFooter{
+    height:17%;
+}
+
+    .btnAddParameterOpt
+    {
+        
+        visibility:hidden;
+        display: none;
+      
+    width: 0%;
+    margin-left: -28px;
+    }
+    .btnSearch
+    {
+   margin-left: 40%;
+    margin-top: 30px;
+    height: 60px;
+    width: 21%;
+    background-color: #425563;
+    border-color: transparent;
+    border-radius: 1px;
+    font-size: 119%;
+    font-family: MetricWebMedium;
+    margin-bottom: 22px;
+    }
+    .patientSearchCol1
+    {
+        
+        width:5%;
+        padding-top:62px !important;
+        
+    }
+     .patientSearchCol2
+    {
+       width:10%;
+        padding-top:62px !important;
+            font-size: 170%;
+        
+    }
+    
+     .patientSearchCol3
+    {
+        
+        width:30%
+           padding-top:70px !important;
+        
+    }
+    
+     .patientSearchCol4
+    {
+        
+        width:40%;
+       
+        
+    }
+    .btnAddParameter
+    {
+        outline: none;
+        margin-top:0;
+           /*margin-top: -0.5%;*/
+        /*height: 59%;*/
+        margin-left:0;
+         height:100%;
+    border-radius: none;
+    width: 44px;
+  
+    font-size: 164%;
+    /*margin-left: 11px;*/
+    border-radius: 0px;
+    border-color: white;
+    border: 2px solid;
+    background-color: #00A982;
+       /* height: 46px;
+    border-radius: none;
+    width: 46px;
+    font-size: 173%;
+   
+    margin-left: 11px;
+  
+    border-radius: 0px;
+    border-color: white;
+    border: 2px solid;
+  
+    background-color: #00A982;*/
+    }
+    
+    
+    .btnAddParameter:hover {
+    color: #fff;
+background-color: #00A982;
+    border-color: white;
+    }
+    .btnSearch:hover
+    {
+         background-color: #425563;
+    border-color: transparent;
+        
+    } 
+    
+    
+    
+    .listItems
+    {
+        
+        height:50px;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    .patientDataTable{
+            
+            width:100%;
+        }
+        
+        
+        .patientDataRow{
+            
+     height: 185px;
+    width: 100%;
+    border-bottom: 1px solid gray;
+        }
+        
+        .patientDataMainDiv{
+            
+           height: 165px;
+    width: 100%; 
+            
+        }
+        .patientImageDiv{
+            
+    float: left;
+    width: 15%;
+    height: 150px;
+    display: none;
+
+        }
+        
+    .patientImage{
+        
+        padding:14px;
+       
+        width: 103px;
+    height: 123px;
+    }
+        .patientNameDiv{
+   float: left;
+    width: 25%;
+    height: 140px;
+    font-size: 190%;
+   padding: 40px 14px 14px 30px;
+        }
+        
+   .patientDetailsDiv {
+    float: left;
+    font-size: 105%;
+    width: 45%;
+    height: 140px;
+    /* padding: 20px; */
+    padding: 40px 14px 14px 14px;
+}
+        .patientAgeDiv{
+    width: 33%;
+    height: 85px;
+            float:left;
+        }
+        
+        .patientDOBDiv{
+            float: left;
+    height: 85px;
+    width:33%;
+            
+        }
+        .patientSSNDiv{
+            float: left;
+    width: 33%;
+    height: 85px;
+            
+        }
+         .resultsCount
+        {
+            
+            color: grey;
+    
+    font-family: MetricWebThin;
+            margin-left: 30px;
+    font-size: 242%;
+    /* line-height: 189%; */
+    padding-top: 10px;
+        } 
+    
+    
+    
+    
+    .detailsHead
+    {
+    color: grey;
+    font-size: 115%;
+    font-family: MetricWebMedium;  
+    }
+    
+    
+    
+    
+    
+    
+    .detailsBody{
+        
+        font-size:120%;
+        
+        
+    }
+    /*patient details page*/
+
+   #patientDetailsPage{
+        height:100%;
+        width:100%;
+         background-color: white;
+         font-family:MetricWebRegular;
+        overflow-y: hidden;
+    }
+
+
+    .patientDetailsContainer{
+        width:100%;
+            height: 25%;
+   
+            /*min-height: 208px;*/
+    }
+
+    #tabsAndContents{
+        height:75%;
+        width:100%;
+    }
+
+    .patientBasicDetailsContainer{
+        height: 80%;
+    width: 40%;
+    float: left;
+    background-color:#F0F0F0;
+    border-right: 1px solid #b3b3b3;
+
+    }
+    .patientImageContainer{
+
+            height: 100%;
+  width: 40%;
+    float: left;
+    }
+    .patientNameContainer{
+     height: 37%;
+        width: 60%;
+    float: left;
+    color: #333333;
+    padding-top: 2%;
+    padding-right: 4%;
+    /*font-size: 180%;*/
+    font-weight: bold;
+    font-family: MetricWebBold;
+
+    font-size: 155%;
+    line-height: 1.2;
+
+    }
+    .patientBasicsContainer{
+
+            height: 50%;
+    width: 60%;
+    float: left;
+    padding-top: 0%;
+    /*padding-right: 4%;*/
+    }
+    .patientBasicsTable{
+        /*height:100%;*/
+        /*width:96%;*/
+        width: 100%;
+    float: left;
+    }
+    .ageColumn{
+        width:18%;
+        vertical-align:top;
+    }
+    .dobColumn{
+        width:23%;
+        vertical-align:top;
+        padding-right:3%;
+    }
+    .idColumn{
+        width:25%;
+        vertical-align:top;
+    }
+    .patientAdditionalDetailsContainer{
+
+       height: 80%;
+   width: 60%;
+    float: left;
+    background-color:#F0F0F0;
+    }
+    .patientAdditionalDetailsTable{
+        height:100%;
+        float: left;
+    width: 65%;
+    }
+    .tableRow{
+        width:100%;
+        height: 50%;
+    }
+    .tableData{
+      
+padding: 0;
+    padding-left: 2%;
+   
+    }
+    .physiciansList{
+        float:left;
+        width: 35%;
+    height: 100%;
+    padding: 3%;
+    border-right:0.75px solid #b3b3b3;
+        padding-top: 18px;
+
+    }
+    .borderRight{
+        border-right:0.75px solid #b3b3b3;
+       
+    }
+    .borderBottom{
+        border-bottom:0.75px solid #b3b3b3;
+    }
+    .accordionsContainer{
+       height: 20%;
+        float:left;
+        width:100%;
+    }
+    .allergyDetailsContainer{
+         height: 100%;
+    width: 100%;
+    float: left;
+    text-align: center;
+    padding-top: 0;
+    font-size: 115%;
+    color: white;
+    font-weight: bold;
+    background-color: #EA384E;
+    display:table;
+
+    }
+
+    .appointmentsContainer{
+
+       height: 50%;
+    width: 100%;
+    text-align: center;
+    font-size: 135%;
+    padding-top: 0;
+    float: left;
+    font-weight: bold;
+    background-color: #E6E6E6;
+    display:table;
+    }
+    .accordionAllergyData{
+        display:table-cell;
+        vertical-align:middle;
+
+    }
+    .accordionAppointmentData{
+        display:table-cell;
+        vertical-align:middle;
+
+
+    }
+    .detailsAttributeName{
+
+      color: #b3b3b3;
+    font-size: 95%;
+    font-weight: bold;
+    }
+
+    .detailsAttributeValue{
+       color: #333333;
+    font-size: 105%;
+    font-weight: bold;
+    }
+
+
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+    color: #555;
+    background-color: #fff;
+    /*border: 1px solid #ddd; 
+    border-bottom-color: transparent;*/
+    border-style:none!important;
+    cursor: default;
+} 
+
+
+
+.backButtonClass{
+
+    
+    height: 100%;
+    width: 100%;
+    background-color: Transparent;
+                background-repeat:no-repeat;
+    border: none;
+   
+}
+
+.backButtonImage{
+    margin-left:6px;
+    float:left;
+
+} 
+
+
+  .patientImg {
+    width: 93%;
+    height: 92%;
+    margin-top: 4%;
+    margin-left: 3.5%;
+    border-radius: 50%;
+    border:1px solid #CECECE;
+}
+
+  
+  
+ /*.patientImg {
+     
+    /* padding-top: 10%; 
+    
+    border-radius: 50%;
+    border-color: black;
+    margin-top: 5%;
+        margin-left: 5px;
+    height: 89px;
+    width: 110px;
+    /*width:10%;
+}*/
+        .circleBorder{
+    height: 81%;
+    width: 76%;
+    margin-left: 10%;
+    margin-top: 9%;
+    border-radius: 50%;
+    border: 2px solid #CECECE;
+    background-color: #F0F0F0;
+         }
+
+
+
+
+         /*.patientImg {
+    width: 96%;
+    height: 91%;
+    margin-top: 4%;
+    margin-left: 2%;
+    padding-top: 0%;
+}*/
+
+
+
+
+
+.allDataContainer  {
+    height: 95%;
+    width: 80%;
+    float: right;
+    overflow-x: hidden;
+      overflow-y: hidden;
+    } 
+
+    .menuBar{
+        float: right;
+    height: 100%;
+    width: 20%;
+    border-right: 1px solid #CCCCCC;
+    }
+    .menuUL{
+        list-style-type:none;
+        padding: 0;
+    margin-bottom: 0;
+    height: 39%;
+    min-height: 257px; 
+   
+    font-family:MetricRegularMedium;
+
+    }
+    .menuListItem{
+    height: 20%;
+    padding-top: 7%;
+    padding-left: 7%;
+    color: #666666;
+    font-family: MetricWebMedium;
+    font-size: 113%;
+    }
+    .menuItemName{
+            margin-left: 9%;
+           
+            
+            vertical-align: middle;
+
+    }
+    .menuIcon{
+        font-size: 135%;
+       
+        vertical-align: middle;
+
+    }
+
+
+
+
+
+
+
+.medicationValue
+     {
+         
+       /*color:red;*/
+         display:inline;
+     }
+     .glyMedication
+     {
+           
+    color: red;
+  
+    font-size: 100%;
+    float: right;
+
+        margin-top: 2%;
+    
+    position: relative;
+    left: -70%;
+   
+     }
+
+
+ 
+
+.accordionsAllergyGlyphicon{
+
+     float: none;
+    position: none;
+    right: 0%;
+    top:0;
+    display:table-cell;
+        vertical-align:middle;
+
+}
+
+
+     .patientDetailsPagePageHeader
+{
+  left: 0;
+    height: 5%;
+    width: 100%;
+    position: relative;
+   
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: black;
+    font-family: SansPro;
+    background-color: white;
+    transition: all 0.3s ease;
+    color:black;
+    min-height: 50px;
+}
+
+.patientDetailsPagePageHeader .pageTitles{
+    color:black;
+} 
+.patientTabsForMobile{
+
+        display:none;
+    }
+
+
+
+.patientDetailsPageTabs{
+    height:56%;
+    min-height:380px;
+}
+.patientDetailsUtils{
+    height:12%;
+}
+
+#patientInfoDivContents{
+    height: 86%;
+    overflow-y:auto;
+    width:100%;
+}
+#infoContentLoaderDiv{
+    height:100%;
+    width:100%;
+}
+
+.pTagNoBottomMargin{
+    margin-bottom:0;
+}
+
+
+/*medicalHistory*/
+.medicalHistoryDetailsContainer{
+    width:100%;
+    height:100%;
+    overflow-y:auto;
+    
+    padding-bottom: 25px;
+}
+.medicalHistoryClass{
+       border-bottom: 2px solid #405664;
+    width: 100%;
+        display: inline-block;
+}
+.historyCategoryHeadingDiv{
+    border-bottom: 1px solid #cccccc;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    width: 100%;
+}
+.historyCategoryHeading{
+    text-align: left;
+    margin-left: 20px;
+    font-weight: bold;
+    color: #00A982;
+    font-size: 105%;
+}
+
+.historyDetails{
+    display: table;
+    margin-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #e1e1e1;
+    width: calc(100% - 20px);
+}
+.issueName{
+        display: table-cell;
+    text-align: left;
+  
+    vertical-align: middle;
+    font-size: 120%;
+    font-weight: bolder;
+}
+.dateDetails{
+    text-align: right;
+    display: table-cell;
+    vertical-align: middle;
+    float: right;
+    margin-right: 20px;
+
+}
+
+.dateHeading{
+    color: #b3b3b3;
+    font-weight: bold;
+}
+.dateData{
+    font-size: 115%;
+    font-weight: bold;
+}
+
+.familyHistoryDiv{
+        padding-top: 5px;
+    width: 33.3%;
+    float: left;
+    border-right: 1px solid #cccccc;
+    padding-bottom: 5px;
+        border-bottom: 1px solid #cccccc;
+}
+.familyHistoryTable{
+        width: 100%;
+    text-align: center;
+}
+.diseaseName{
+font-size: 115%;
+}
+.relation{
+
+}
+.extraPadding{
+
+        padding-bottom: 12px;
+    padding-top: 12px;
+}
+
+
+
+
+/*observation and laboratory page*/
+.laboratoryDetailsContainer{
+    width:100%;
+    height:100%;
+    width:100%;
+}
+.vitalsContentHeader{
+    width:100%;
+        height: 18%;
+
+
+}
+.vitalsDataTable{
+     width:100%;
+     height:82%;
+}
+.vitalsDataHolder{
+    height:40%;
+    width:16.66%;
+    float:left;
+    border:1px solid #EBEBEB;
+}
+
+.noLeftPadding{
+    padding-left:0;
+}
+
+.vitalValTable {
+    width: 100%;
+    text-align: center;
+}
+/*medical charts desktop style*/
+.medicalChartsContainerDiv{
+    height:100%;
+    width:100%;
+    padding-bottom:20px;
+    overflow-y:auto;
+}
+.medicalChartTypeSelectorDiv{
+    height:75px;
+
+}
+.medChartsDropdownDiv{
+    margin-left:20px;
+    padding-top:20px;
+        width: 37%;
+}
+
+
+
+.medicalChartDisplayDiv{
+    /*height:calc(100% - 75px);*/
+    width:1200px;
+    overflow-x:auto;
+    /*width:600px;*/
+    display:inline-block;
+
+}
+
+.hpe_logo_searchPage{
+    margin-left:2%;
+    margin-top:0;
+}
+
+
+.resCodeTable{
+   
+
+    width: 100%;
+    float: left;
+}
+
+.resCodeColumn{
+
+}
+.GMSDivs{
+width:33%;
+float:left;
+padding-left: 5px;
+text-align:left;
+padding-top: 15px;
+font-size: 115%;
+}
+
+.othersSectionContainer{
+    padding-top:20px;
+height:100%;
+width:100%;
+font-family: MetricWebMedium;
+    overflow-y: auto;
+}
+.gmsTable{
+    width:100%;
+
+}
+.patientDietHeading{
+text-align:left;
+padding-left: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #CCCCCC;
+    color: #00A982;
+    font-weight: bold;
+    font-size: 100%;
+}
+
+.patientDataDivs{
+    display:inline-block;
+    width:100%;
+   padding-top: 15px;
+    border-bottom: 1px solid black;
+}
+.patientOthersDataRow{
+       display: table;
+    margin-left: 13px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #E0E0E0;
+        width: calc(100% - 13px);
+        font-size: 120%;
+}
+
+.dataName{
+    float: left;
+        display: table-cell;
+        font-weight: bold;
+}
+
+.dataValue{
+    float: right;
+    margin-right: 15px;
+        display: table-cell;
+}
+.gmsHeading{
+    color: #b3b3b3;
+    font-weight: bold;
+    font-size: 90%;
+}
+.gmsData{
+    font-size: 104%;
+}
+
+.modal-dialog {
+    width: auto;
+    margin: 30px auto;
+    max-width:750px;
+}
+
+.medicalComplianceTable{
+    float: left;
+ 
+    display: inline-block;
+}
+.paddingTop{
+    padding-top:17px;
+}
+.verticalAlignment{
+    vertical-align:top;
+}
+.lastRow{
+       border-bottom:transparent;
+      
+   }
+
+.laboratoryMainModal{
+    overflow-y: hidden;
+}
+.laboratoryModalDialog{
+    margin-top: 45px;
+   
+    height: calc(100% - 90px);
+}
+.allergyModalMainDialog{
+    overflow-y: hidden;
+}
+.allergyModalDialog{
+    margin-bottom: 0;
+  
+  
+    margin-top: 0;
+    height: 100%;
+}
+.allergyModalContent{
+    height:320px;
+}
+.observationModalDialog{
+        margin-top: 0;
+    margin-bottom: 0;
+    height: 100%;
+}
+.observationModalContent{
+    top: calc((100% - 418px)/2);
+}
+.observationMainModal{
+    overflow-y:hidden;
+}
+.medicalConsultationMainModal{
+    overflow-y:hidden;
+}
+.medicalConsultationModalDialog{
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 100%;
+}
+.medicalConsultationModalContent{
+    height: 418px;
+    top: calc((100% - 418px)/2);
+}
+
+.modalMedicalConsultationFooter{
+        padding-bottom: 0;
+    margin-top: 0;
+    padding-top: 14px;
+    height: 61px;
+}
+.inrModalContent{
+
+   width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    height: 240px;
+    border-radius: 0;
+        top: calc((100% - 240px)/2);
+}
+.inrModalBasicData{
+    width:73%;
+    float:left;
+}
+.inrBody{
+        width: 100%;
+      height: 192px;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+}
+.inrData{
+height: 110px;
+}
+
+.inrDataMainTable{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.inrDataMainTableRow{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.inrDataMainTableBox {
+    width: 50%;
+    border-right: 1px solid #b3b3b3;
+    text-align: center;
+}
+.inrDatasubTable{
+        width: 100%;
+}
+
+
+    
+   
+.pdfHolder{
+    max-height: 95%;
+    max-width: 100%;
+    overflow-y: scroll;
+    height: auto;
+    width: auto;
+    display: block;
+    background:white;
+}
+
+
+.pdfControls{
+    position:fixed;
+   
+    top:95%;
+    left:calc((100% - 204px)/2);
+}
+canvas{
+    height:100%;
+    width:100%;
+}
+
+
+.pdfViewerClass{
+    background-color:white;
+}
+.logo_image_mobile{
+    display:none;
+}
+/*.highcharts-container{width:100% !important; height:100% !important;}*/
+@media screen and (min-width: 320px) and (max-width:599px)
+{
+     .logo_image_mobile{
+         display:block;
+         margin-left:10px;
+         height: 42px;
+    width: 95px;
+     }  
+    
+    #loginPage
+    {
+     background-color:white;   
+        
+    }
+    
+    .loginMenu
+    {
+        width: 86%;
+    margin-left: 14%;
+   
+    margin-top: 10%;
+    box-shadow: none;
+    position: relative;
+    /*height: 71%;  */  
+        
+        
+    }
+    .sideBarText{
+          
+         font-size:100%; 
+          
+      }
+    
+    
+    .loginPageHeader
+    {
+        
+        height:5%;
+        
+        
+    }
+    
+    .loginPageBody
+    {
+        
+        height:75%
+        
+    }
+    
+    .loginPageFooter
+    {
+        height:20%;
+        
+        
+    }
+    .hpe_logo {
+   
+    margin-top: 8%;
+    }
+    .bannerClass{
+        
+        width: 86%;
+    position: relative;
+    margin-left: 14%;
+    height: 19%;
+    margin-top: 0;
+        
+        
+    }
+    .bannerTitle
+    {
+        
+    font-size: 130%;       
+        
+    }
+    
+    .bannerContent
+    {
+    font-size: 183%;
+        
+    }
+    
+    .loginMessageText{
+        text-align: left;
+                                margin-bottom: 0px;
+                                font-size: 0.9em;
+    }
+
+    .loginMessage
+
+    {
+       margin-top: 8%;
+    /* margin-left: 15%; */
+    font-size: 150%;
+    position: relative;
+    font-weight: bold;
+    position: relative;
+    width: 100%;
+    }
+    
+    .group 
+    { 
+    margin-left: 0%;
+    position: relative;
+    margin-top: 0px;
+  
+    }
+    
+   .btnLogin
+    {
+
+    width: 80%;
+    height: 40px;
+    font-size: 127%;
+    font-weight: 159%;
+    margin-left: 0%;
+    margin-top: 9%;                      /*change made*/
+    border-radius: 0;
+    background-color: #00AA84;
+    color: white;
+
+    }
+    
+     
+     
+    .txtDetails
+    {
+    
+    padding-top: 11%;
+    padding-bottom: 0%;
+  
+    }
+    /*.main-nav ul li:hover {
+          
+          background: #2F434E;
+          
+      }*/ 
+    
+     /*.main-nav ul li:focus {
+          
+          background: #2F434E;
+          
+      }*/ 
+    .logo_image
+    {        
+        
+        height: 45%;
+        display:none;
+    }
+    
+    .pageTitles 
+    {
+    font-size: 130%;
+    margin-top: 0px;
+    margin-bottom: 0;
+    }
+     .detailsHead
+    {
+   color: #b3b3b3;
+    font-weight: bold;                     /*change made*/
+    font-size: 89%;
+    font-family: MetricWebMedium;  
+    }
+        
+    .searchLabel 
+    {
+    text-align: center;
+    padding-top: 8px;
+    color: white;
+    font-size: 135%;
+    font-family: MetricWebLight;
+    }
+      
+    .searchInp
+    {
+    margin-left: 17%;
+    margin-top: 7px;
+    height: 44px;
+    width: 212px;
+    font-family: MetricWebMedium; 
+    
+    }
+
+    .resultsCount
+    {
+    color: grey;
+    font-size: 176%;
+    margin-left: 15px;                    /*change made*/
+    padding-top: 4px;
+    padding-bottom: 4px;           
+    font-family: MetricWebThin;
+    }
+    .btnSearch
+    {
+    margin-left: 17%;
+    margin-top: 41px;
+    height: 44px;
+    width: 212px;
+    }
+
+    .btnSearch:hover,.btnSearch:focus,.btnSearch:active{
+        background-color: #425563;
+    border-color: transparent;
+    border-radius: 1px;
+    }
+    .searchContent 
+    {
+    height:70%;
+    width: 100%;
+    background-color: #00A982;      
+    }
+        
+   .inputForms
+    {
+    height:61%;
+    }
+    .btnAddParameter {
+    margin-left: -2.5%;
+    width: 11%;
+    margin-top: 6%;
+    height: 23%;
+    font-size: 139%;
+}
+    .btnAddParameterOpt {
+    visibility: visible;
+    width: 54%;
+    margin-left: 18%;
+    margin-top: 6%;
+    height: 23%;
+    border-radius: 0;
+    border: 2px solid white;
+    background-color: #00a982;
+    font-size: 121%;
+    font-family: MetricWebMedium;
+}
+    .patientSearchPagePageHeader 
+    {   
+    border-bottom-width: 1px;
+    height:45px;
+    }
+    .patientSearchPagePageHeader a 
+    {   
+    left: 12px;
+    top: 7px;
+    font-size: 24px;
+    }
+       
+    .page-wrap 
+    {
+    float: right;
+    width: 100%;
+    transition: width 0.3s ease;
+    overflow: hidden;
+    }
+   .main-nav 
+    {
+    position: fixed;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: #425563;
+    overflow-y: auto;
+    transition: width 0.3s ease;
+    white-space: nowrap;
+    overflow-x: hidden;
+    font-size:80%;
+    }
+
+.main-nav ul li {
+  display: block;
+
+  color: white;
+
+    list-style-type: none;
+   line-height: 52px;
+    padding-left: 29px;
+    
+}
+      .main-nav ul{
+          
+          font-size: 135%;
+          padding-left:0;
+      }
+
+      /*.main-nav ul li:hover {
+          
+          background: #2F434E;
+          
+      }*/
+
+.main-nav:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 4px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+}
+
+/*.content {
+  padding: 100px 20px 20px 20px;
+  max-width: 900px;
+}*/
+
+.patientSearchFooter{
+         display:none;
+     }
+
+.close-menu {
+  display: none;
+}
+
+#main-nav:target {
+  width: 226px;
+}
+
+#main-nav:target + .page-wrap {
+
+    width: 100%;
+    /* left: 281px; */
+    overflow: hidden;
+}
+
+#main-nav:target + .page-wrap .close-menu {
+  display: block;
+}
+
+#main-nav:target + .page-wrap .patientSearchPagePageHeader ,#main-nav:target + .page-wrap .searchPatientPageBody,#main-nav:target + .page-wrap .patientSearchPageFooter {
+/*  width: 70%;*/
+/* left: 30%;*/
+    margin-left:226px;
+    overflow:hidden;
+    
+}
+   .notificationSymbolClass{
+          
+    background: transparent;
+    border: none;
+    float: right;    
+          
+          
+      }       
+       
+    .fa-2x {
+   font-size: 1.7em;
+    color: white;
+    padding: 12px;
+      }
+      
+      .sideBarGlyph{
+          
+          padding-right:21px;
+      }
+      
+      .sideBarText{
+          
+          padding-left: 6%;
+          
+      }
+      .sideBarLogoClass{
+          
+      position: absolute;
+    bottom: 6%;
+    left: 29px;    
+    display:block;
+      }
+#patientSearchPage{
+    background-color:white;
+                background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+/*.patientSearchPagePageHeader{
+    height: 7%;
+    width: 100%;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: black;
+    font-family: SansPro;
+    background-color: #00A982;
+}*/
+
+.headderContentTable
+{
+    height: 100%;
+    width: 100%;
+}
+.floatLeft
+{
+    float: left;
+}
+/*.searchPatientPageBody{
+      height: 78%;
+    font-family: SansPro;
+  }*/
+.patientSearchUtils
+{overflow-x:auto;
+/* overflow-y:scroll;*/
+    height: 100%;
+}
+
+
+.patientSearchPageFooter
+{
+height:15%;
+    
+    
+}
+    
+.patientSearch-utils-spacing
+    {
+        
+        
+        height:100%;
+    }
+        
+        
+        
+        .searchInp {
+            
+            
+            
+            width:64%;
+            margin-left:18%;
+            margin-right:18%;
+            height:20%;
+             font-family: MetricWebMedium; 
+             font-size: 150%;
+        }    
+      
+        .searchButton{
+            
+            
+            height:20%;
+        }
+        .btnSearch {
+    height: 70%;
+    width: 63%;
+    margin-top: 2%;
+    margin-left: 18%;
+}
+       
+        .inputForms{
+            
+            height:61%;
+        }
+        .addedInput{
+                width: 64%;
+    margin-left: 18%;
+    margin-right: 18%;
+    margin-top: 3%;
+    height: 20%;
+        font-family: MetricWebMedium;     
+        font-size: 150%; 
+            
+        }
+        
+        .newInp {
+    width: 64%;
+    margin-left: 18%;
+    margin-right: 18%;
+    margin-top: 3.5%;
+    height: 20%;
+     font-family: MetricWebMedium; 
+     font-size: 150%;
+}
+        
+        
+        
+        
+        
+        
+        .patientDataTable{
+            
+            width:100%;
+        }
+        
+        
+        .patientDataRow{
+            
+     height: 145px;
+    width: 100%;
+        }
+        
+       .patientDataMainDiv{
+            
+           height: 165px;                  /*change made*/
+    width: 100%; 
+    padding-left:15px;
+            
+        }
+        .patientImageDiv{
+            
+            float: left;
+  width: 31%;
+            padding-left:11px;
+    height: 100px;
+        }
+        
+        .patientNameDiv{
+            padding: 0;
+            float: left;
+      height: 55px;
+    width: 69%;
+            font-size: 23px;
+        }
+        
+        .patientDetailsDiv{
+          padding:0;  
+            float: left;
+    height: 85px;
+    width: 67%;
+        font-size: 120%;
+        }
+        .patientAgeDiv{
+            float: left;
+    width: 50%;
+    height: 42px;
+        }
+        
+        .patientDOBDiv{
+            float: left;
+    width: 50%;
+    height: 42px;
+            
+        }
+        .patientSSNDiv{
+            float: left;
+    width: 50%;
+    height: 42px;
+    margin-top: 7px;
+            
+        }
+        .detailsBody
+        {
+            font-size:100%;
+            
+        }
+        .patientImage{
+            
+            padding: 0;
+    width: 85%;
+    height: 69px;
+        } 
+
+
+
+
+
+
+
+        .openSideBar{
+    width: 226px;
+}
+.movePatientSearchScreen{
+    margin-left:226px;
+    overflow:hidden;
+
+}
+
+
+/*patient multiple search*/
+
+
+.btnAddParameterGlyphicon {
+    left: -3px;
+    top: -3px;                     /*change made*/
+}
+
+.btnAddParameter{
+    height: 55px;
+    width: 40px;
+    margin-top: 0px;              /*change made*/
+    margin-left:0;
+}
+
+ .inputForms input{
+     margin-left: calc((100% - 210px)/2);
+    width: 210px;
+    margin-right: 0;
+    height: 56px;
+ }
+
+.searchPatientPageBody{
+    height:calc(100% - 45px);
+}
+
+     .searchContent {
+    /*height: 39%;*/
+    width: 100%;
+    background-color: #00A982;
+    min-height:300px;
+    padding-top: 0;
+  
+    display:inline-block;
+    overflow-y: auto;
+    height: 310px;
+}
+     
+     .patientSearchTable {
+    width: 100%;
+    /* height: 390px; */
+  height: calc(100% - 310px);
+    font-family: MetricWebMedium;
+    overflow-y: auto;
+    display:inline-block;
+}
+
+     .patientSearchFooter{
+         display:none;
+     }
+
+
+        .searchLabel {
+    font-size: 146%;
+  padding-top: 15px;
+    padding-bottom: 15px;
+}
+         .searchInp
+         {
+             
+        
+    width: 32%;
+    margin-left: 34%;
+    /*height: 35%;*/
+    font-size: 150%;
+    height:56px;
+    margin-top:0;
+         }
+
+
+        .addedInput {
+    /*height: 35%;*/
+    margin-left: 34%;
+    width: 32%;
+    margin-top: 0;
+     font-family:MetricWebMedium;
+     font-size: 150%;
+       height:56px;
+}
+         .inputForms{
+
+display: inline-block;
+    height: auto;
+    
+
+         }
+
+
+         .displayThirdTextBox {
+    margin-top: 15px;
+    margin-left: 34%;
+    /* margin-top: 1%; */
+    height: 60px;
+    width: 32%;
+    font-family: MetricWebMedium;
+    font-size: 150%;
+    float: left;
+}
+         .displayModifiedThirdTextBox{
+   margin-top: 15px;
+    margin-left: 34%;
+    /* margin-top: 1%; */
+    height: 60px;
+    width: 32%;
+    font-family: MetricWebMedium;
+    font-size: 150%;
+    float: left;
+}
+
+         .displayFourthTextBox{
+ margin-top: 15px;
+    margin-left: 34%;
+    /* margin-top: 1%; */
+    height: 60px;
+    width: 32%;
+    font-family: MetricWebMedium;
+    font-size: 150%;
+    float: left;
+         }
+
+        .newInp {
+    /*height: 35%;*/
+    margin-left: 34%;
+    width: 32%;
+       margin-top: 15px;
+     font-family:MetricWebMedium;
+     font-size: 150%;
+       height:56px;
+}
+.searchButton{
+display: inline-block;
+    width: 100%;
+    margin-top: 0;
+    height: auto;
+}
+
+     /*.main-nav ul li:hover {
+          
+          background: #2F434E;
+          
+      }*/
+    .plusButtonDiv {
+        margin-left: 11px;
+        position: relative;
+        
+        display: inline-block;
+       /*display: block;*/
+        margin-top:0;
+      
+    width: 40px;
+    height: 56px;
+
+       
+   
+    }
+      .btnSearch {
+   
+   
+   
+      height: 56px;
+   
+    margin-top: 22px;
+    margin-bottom: 21px;
+
+        margin-left: calc((100% - 210px)/2);
+    width: 210px;
+}
+
+
+
+
+  /*patient details page here*/
+             
+    .allDataContainer  {
+   height: calc(100% - 145px);
+    
+    width: 100%;
+    }
+         
+     .patientDetailsContainer{
+       
+    height: 166px;                              /*change made*/
+    overflow-y: hidden;
+    width: 100%;
+
+    }
+     #tabsAndContents{
+         height: calc(100% - 164px);              /*change made*/
+     }
+     .patientDetailsPagePageHeader{
+    height:55px;
+     }
+    .patientBasicDetailsContainer{
+    height: 121px;                              /*change made*/                        
+    width: 100%;
+    float: left;
+    background-color:#F0F0F0;
+    border-right: 0;
+
+    }
+    .patientImageContainer{
+height: 115px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    width: 34%;                             /*change made*/                          
+    }
+    .patientImg {
+   
+    padding: 0;
+    height: 71px;
+    width: 97px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+    .circleBorder{
+           background: #f0f0f0;
+    margin-left: calc((100% - 110px)/2);
+    width: 110px;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid #CECECE;
+    margin-top: 0;
+    }
+     .patientNameContainer{
+    width: 66%;
+    height: 33px;
+                                          /*change made*/
+    color: #333333;
+    font-size: 164%;
+    font-weight: bold;
+    
+    padding: 0;
+    margin-top: 5%;
+    
+
+    }
+    .patientBasicsContainer{
+    height: 54px;
+    padding-bottom: 5px;
+    padding-top: 0%;
+    padding-right: 0%;                    /*change made*/
+    width: 66%;
+                       
+    }
+     .patientBasicsTable{
+        /*height:100%;*/
+       
+        height: 100%;
+    width: 64%;                        /*change made*/
+    float: left;
+    }
+    .resCodeTable {
+    width: 36%;
+    float: left;                       /*change made*/
+}
+    .ageColumn{
+        width:30%;
+    }
+    .dobColumn{
+        width:45%;
+    }
+    .idColumn{
+        width:25%;
+    }
+    .patientAdditionalDetailsContainer{
+
+       height: 40%;
+    width: 100%;
+    float: left;
+    background-color:white;
+    border-bottom: 0.75px solid #b3b3b3;
+    position: relative;
+    top: 20%;
+    display:none;
+    }
+    .patientAdditionalDetailsTable{
+        height:100%;
+        float: left;
+    width: 62%;
+    
+    }
+    .tableRow{
+        width:100%;
+    }
+    .tableData{
+        padding:2%;
+
+    }
+    .physiciansList{
+        float:left;
+        width: 38%;
+    height: 100%;
+    padding: 2%;
+    border-right:0.75px solid #b3b3b3;
+
+    }
+    .borderRight{
+        border-right:0.75px solid #b3b3b3;
+       
+    }
+    .borderBottom{
+        border-bottom:0.75px solid #b3b3b3;
+    }
+   .accordionsContainer{
+        height: 45px;
+        float:left;
+        width:100%;
+        position: relative;
+    top: 0%;
+    }
+
+   .accordionAllergyData{
+     
+    margin-bottom: 0;
+    /* vertical-align: middle; */
+    /* line-height: 300%; */
+    display: table-cell;
+    vertical-align: middle;
+     font-size: 100%;
+     padding: 0 11px;
+
+   }
+  
+    .allergyDetailsContainer{
+    height: 100%;
+    width: 100%;
+    float: left;
+    color: white;
+    text-align: center;
+   /*font-size: 88%;*/
+    padding-top: 0;
+    font-weight: bold;
+    background-color: #EA384E;
+    display: table;
+
+    }
+
+    .appointmentsContainer{
+
+    height: 50%;
+    width: 100%;
+    float: left;
+    text-align: center;
+    padding-top: 0;
+    font-weight: bold;
+    /*font-size: 88%;*/
+    background-color: #E6E6E6;
+    display:table;
+    }
+
+    .detailsAttributeName{
+
+        color:#b3b3b3;
+        font-size:105%;
+        font-weight:bold;
+    }
+
+    .detailsAttributeValue{
+        color:#333333;
+        font-size:110%;
+        font-weight:bold;
+    }
+
+     .medicationValue
+     {
+         
+       /*color:red;*/
+         display:inline;
+     }
+     .glyMedication
+     {
+           
+    color: red;
+  
+    font-size: 100%;
+    float: right;
+
+        margin-top: 2%;
+    
+    position: relative;
+    left: -73%;
+   
+     }
+      
+
+      .accordionsAllergyGlyphicon{
+          
+        float:none;
+        position:none;
+        top:0;
+         right:1%;
+    /* display: table-cell; */
+    /* vertical-align: middle; */
+
+ display: table-cell;
+    vertical-align: middle;
+      }
+      .accordionsAppointmentGlyphicon{
+
+        float:none;
+        position:none;
+        top:0;
+         right:2%;
+    /* display: table-cell; */
+    /* vertical-align: middle; */
+
+ display: table-cell;
+    vertical-align: middle;
+      }
+
+
+  
+
+     .patientBasicsTable td{
+         text-align: left;
+      }
+
+
+
+
+
+     
+
+
+     .patientDetailsPageTabs{
+display:none;
+     }
+     .segmentIndicator{
+             height: 20px;
+             border-bottom:1px solid #D3D3D3;
+             background-color:#F0F0F0;
+     }
+
+
+     .menuBar{
+background-color: white;
+  
+  height: 90px;
+    width: 100%;
+    bottom: 0;
+    border-top: 1px solid #999999;
+    overflow-y:hidden;
+}
+.menuUL{
+list-style-type:none;
+margin-left:0;
+margin-bottom:0;
+height: 100%;
+    padding: 0;
+    text-align: center;
+    font-family:MetricWebMedium;
+        overflow-x: scroll;
+    width: 595px;
+}
+.menuListItem{
+    float:left;
+  width: 80px;
+   height: 90px;
+      padding-top: 15px;
+    padding-left: 3px;
+    padding-right: 3px;
+    font-size:90%;
+     color:#666666;
+}
+.menuListItem:hover{
+    background-color:#F6F6F6;
+
+}
+.menuIcon{
+   /*float: left;*/ 
+  font-size: 170%;
+  
+}
+.menuItemName{
+    float:left;
+   
+    width: 100%;
+        margin-top: 3px;
+        margin-left: 0;
+        font-size: 100%;
+}
+
+
+
+
+     .patientTabsForMobile{
+         display:block;
+         height:26%;
+         width:100%;
+         overflow-y:scroll;
+         
+     }
+
+     .patientTabsForMobile ul{
+         height:100%;
+         width:100%;
+         padding:0;
+
+     }
+      .patientTabsForMobile ul li{
+          width:100%;
+          list-style-type:none;
+          border-bottom:1px solid #D3D3D3;
+          height:45%;
+          color:#333333;
+          font-weight:bold;
+         
+
+          
+      }
+        .patientTabsForMobile ul li img {
+    height: 39%;
+    width: 7%;
+    margin-left: 4%;
+    float: left;
+    margin-top: 5%;
+        }
+         .patientTabsForMobile ul li p{
+     margin-bottom: 0;
+    float: left;
+    /* width: 72%; */
+    text-align: left;
+    margin-left: 9%;
+    margin-top: 6%;
+    font-size: 120%;
+    display: inline;
+
+         }
+         .listViewGlyphicon{
+    font-size: 149%;
+    color: #CDCDCD;
+    /* margin-right: -13%; */
+    right: 12px;
+    float: right;
+    margin-top: 6%;
+         }
+
+
+   .tabSelectionPage{
+    height:100%;
+    width:100%;
+}
+
+.tabPageHeader{
+    height:10%;
+    width:100%;
+    background-color:white;
+    color:black;
+    border-bottom:2px solid #00A980;
+
+}
+.patientInfoHeader{
+    height:20%;
+    width:100%;
+    background-color:#F0F0F0;
+    border-bottom:1px solid #B3B3B3;
+   
+   
+
+}  
+#selectedTemplate{
+    height:70%;
+    width:100%;
+    background-color:white;    
+}
+.patientInfoContainer{
+    height:100%;
+    width:100%;
+}
+.patientBasicInfo{
+    height:100%;
+    width:100%;
+    padding:4%;
+}
+
+.patientPic{
+    float:left;
+    height:100%;
+    width:30%;
+    padding-right: 5%;
+}
+.patientPhoto{
+    width:100%;
+    height:100%;
+}
+.patientName{
+    float:left;
+    height:50%;
+    width:70%;
+    font-size: 106%;
+    font-weight: bold;
+    font-family: MetricWebRegular;
+
+}
+
+.patientBasicsHolder{
+float:left;
+height:50%;
+width:70%;
+font-family: MetricWebMedium;
+}
+.patientBasicsDataTable{
+    width:100%;
+    height:100%;
+}
+.patientBasicDataName{
+    color:#B3B3B3;
+    font-size: 91%;
+   width:100%;
+  
+    font-family: MetricWebMedium;
+
+}
+.patientBasicDataValue{
+    color:#333333;
+    font-size: 107%;
+}
+
+.ageDataColumn{
+    width:30%;
+}
+.dobDataColumn{
+width:40%;
+}
+.idDataColumn{
+width:30%;
+}
+
+/*allergy modal*/
+
+.allergyModalMainDialog {
+    overflow-y: hidden;
+    height:100%;
+}
+.allergyModalDialog{
+    height:100%;
+}
+.allergyModalContent {
+    height: 320px;
+    margin-top:0;
+    top: calc((100% - 320px)/2);
+}
+
+.medicalConsltDetails {
+    height: 82px;
+    /* padding-left: 11px; */
+    background-color: #F2F2F2;
+    padding-left: 13px;
+}
+.medicalConsltImageContainer {
+   
+    float: left;
+    border: 1px solid #b3b3b3;
+    border-radius: 50%;
+    margin-top: 11px;
+    height: 55px;
+    width: 55px;
+    margin-right: 4%;
+}
+.medicalConsltAllergyPatientName{
+    width: calc(100% - 125px);
+}
+.medicalConsltBasicsContainer {
+    width: calc(100% - 85px);
+    float: left;
+    font-size: 94%;                         /*change made*/
+}
+.updateStatus{
+    font-size:105%;
+}
+.observationBodyTable{
+    font-size:105%;
+}
+
+
+/*medical consultation */
+.medicalConsultationPage {
+    font-weight: bold;
+    height: 100%;
+    margin-top: 17px;
+    margin-left: 8px;
+    width: calc(100% - 11px);
+}
+
+
+.consultationTable {
+    width: 44%;
+    float: left;
+        font-size: 85%;
+}
+
+.editBtn {
+    border-radius: 20px;
+    width: 66px;
+    margin-right: 4px;
+    color: #617A77;
+    border: 1px solid #617A77;
+}
+
+.addBtn {
+    border-radius: 20px;
+    width: 100px;
+    border: 1px solid #FE8E69;
+    color: #FE8E69;
+}
+
+.myGlyphicon {
+    margin-right: 4px;
+    font-size: 101%;
+}
+
+
+.medicalConsltPatientName{
+        width: calc(100% - 100px);
+}
+
+
+.labBasicsContainer {
+    width: 53%;
+    float: left;
+    width: calc(100% - 100px);
+    font-size: 94%;                         /*change made*/
+}
+.labTable1,.labTable2,.labTable3{
+    width:100%;
+    margin:0;
+}
+.labTable1 td,.labTable2 td,.labTable3 td{
+    width:50%;
+}
+
+
+.medicalConsltDetailsAttributeValue {
+    color: #333333;
+    font-size: 125%;
+}
+ 
+.pdfHolder {
+    max-height: 95%;
+    max-width: 100%;
+    overflow-y: scroll;
+   
+    width: auto;
+    display: block;
+    background: white;
+       height: calc(100% - 55px);
+}
+
+.inrModalContent {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 240px;
+    border-radius: 0;
+    top: calc((100% - 240px)/2);
+}
+
+
+.inrModalBasicData {
+    width: 73%;
+    float: left;
+    width: calc(100% - 94px);
+    font-size: 83%;
+
+}
+
+    .timelineCalendarDetailsContainer {
+        overflow-y:scroll;
+    }
+
+    .medicationDetailsContainer{
+        overflow-y:scroll;
+    }
+    .medicinesContainer{
+
+        overflow-y:inherit;
+    }
+    .medicationHeading{
+        height:100px;
+    }
+    .medicationtHead{
+        font-size:88%;
+    }
+    .medDropdownDiv{
+        font-size:82%;
+    }
+}
+    
+    
+    
+    
+     /*and (orientation: portrait)*/
+
+    @media screen and (min-width: 600px) and (max-width:960px) 
+   
+ {
+      #loginPage
+    {
+     background-color:#E6E6E6;   
+        
+    }
+      .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>.hgb{
+    padding:3px;
+}
+      #tabsAndContents {
+    font-size: 115%;
+    /*padding-bottom:30px;*/
+    padding-bottom:0;
+  
+}
+    .detailType{
+        font-size: 115%;
+    }
+    .detailTypeVal{
+        font-size: 118%;
+    }
+    .medicalHistoryDetailsContainer{
+
+        font-size:104%;
+    }
+    
+    .loginMenu
+    {
+   width: 44%;
+    margin-left: 27%;
+    margin-top: 6%;
+    box-shadow: none;
+    position: relative;
+        
+        
+    }
+    
+     .grp_username input, .grp_password input {
+       color: black;
+    margin-top: 6%;
+    padding-top: 7%;
+    width: 83%;
+    height: 56px;
+     }
+    
+    
+    .loginPageHeader
+    {
+        
+       height: 15%;
+        
+        
+    }
+    
+    .loginPageBody
+    {
+        
+       height: 70%;
+        
+    }
+    
+    .loginPageFooter
+    {
+        
+    position: fixed;
+    bottom: 0%;
+    margin-top: 0px;
+    height: 15%;
+        
+    }
+    .bannerClass{
+    width: 100%;
+    position: relative;
+    margin-left: 27%;
+    height: 19%;
+    margin-top: 0;
+        
+        
+    }
+    .bannerTitle
+    {
+        
+      font-size: 170%;
+    text-align: left;
+
+    }
+    
+    .bannerContent
+    {
+   font-size: 270%;
+    font-weight: 600;
+    font-family: MetricWebThin;
+        
+    }
+
+    .loginMessage
+
+    {
+   margin-top: 8%;
+    /* margin-left: 15%; */
+    font-size: 145%;
+    position: relative;
+    font-weight: bold;
+    position: relative;
+    width: 100%;
+    }
+    
+    .group 
+    { 
+      margin-left: 15%;
+    position: relative;
+    margin-top: 2%;
+  
+    }
+    
+    .btnLogin
+    {
+width: 71%;
+    margin-left: 15%;
+    margin-top: 11%;
+    border-radius: 0;
+    background-color: #00AA84;
+    color: white;
+    height: 5%;
+    font-size: 129%;
+
+    }
+    
+    
+   
+    
+    .logo_image
+    {        
+        
+            height: 51%;
+    }
+        
+     .lbl
+     {
+    color: #0aa84;
+    font-size: 125%;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5%;
+    top: 25%;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+    }
+    
+     
+     .searchContent {
+    /*height: 39%;*/
+    width: 100%;
+    background-color: #00A982;
+    min-height:300px;
+    padding-top: 0;
+    height: auto;
+    display:inline-block;
+}
+     
+     .patientSearchTable {
+    width: 100%;
+    /* height: 390px; */
+   height: auto;
+    font-family: MetricWebMedium;
+    overflow-y: auto;
+    display:inline-block;
+}
+
+     .patientSearchFooter{
+         display:none;
+     }
+
+
+        .searchLabel {
+    font-size: 146%;
+  padding-top: 27px;
+    padding-bottom: 25px;
+}
+         .searchInp
+         {
+             
+        
+    width: 32%;
+    margin-left: 34%;
+    /*height: 35%;*/
+    font-size: 150%;
+    height:56px;
+    margin-top:0;
+         }
+
+
+        .addedInput {
+    /*height: 35%;*/
+    margin-left: 34%;
+    width: 32%;
+    margin-top: 0;
+     font-family:MetricWebMedium;
+     font-size: 150%;
+       height:56px;
+}
+         .inputForms{
+
+display: inline-block;
+    height: auto;
+    
+
+         }
+
+
+         .displayThirdTextBox {
+    margin-top: 15px;
+    margin-left: 34%;
+    /* margin-top: 1%; */
+    height: 60px;
+    width: 32%;
+    font-family: MetricWebMedium;
+    font-size: 150%;
+    float: left;
+}
+         .displayModifiedThirdTextBox{
+   margin-top: 15px;
+    margin-left: 34%;
+    /* margin-top: 1%; */
+    height: 60px;
+    width: 32%;
+    font-family: MetricWebMedium;
+    font-size: 150%;
+    float: left;
+}
+
+         .displayFourthTextBox{
+ margin-top: 15px;
+    margin-left: 34%;
+    /* margin-top: 1%; */
+    height: 60px;
+    width: 32%;
+    font-family: MetricWebMedium;
+    font-size: 150%;
+    float: left;
+         }
+
+        .newInp {
+    /*height: 35%;*/
+    margin-left: 34%;
+    width: 32%;
+       margin-top: 15px;
+     font-family:MetricWebMedium;
+     font-size: 150%;
+       height:56px;
+}
+.searchButton{
+display: inline-block;
+    width: 100%;
+    margin-top: 0;
+    height: auto;
+}
+
+     /*.main-nav ul li:hover {
+          
+          background: #2F434E;
+          
+      }*/
+    .plusButtonDiv {
+        margin-left: 11px;
+        position: relative;
+        /* height: 100%; */
+        display: inline-block;
+        height: 60px;
+        margin-top:0;
+    }
+      .btnSearch {
+    width: 32%;
+    /*height: 83%;*/
+   
+    margin-left: 34%;
+      height: 60px;
+    width: 32%;
+    margin-top: 22px;
+    margin-bottom: 21px;
+}
+         .patientSearchCol1
+         {
+             width:15%;
+             
+         }
+         .detailsTable
+         {
+             margin-top: 97px;
+   
+    margin-left: -140%;
+    /* margin-right: 24px; */
+         }
+         .patientSearchCol4
+         {
+            font-size: 132%; 
+         }
+         
+         
+         
+         .sideBarLogoClass{
+             display:block;
+                             }
+         
+         
+          .patientDataTable{
+            
+            width:100%;
+        }
+        
+        
+        .patientDataRow{
+            
+     height: 145px;
+    width: 100%;
+        }
+        
+        .patientDataMainDiv{
+            
+           height: 145px;
+    width: 100%; 
+            
+        }
+        .patientImageDiv{
+            
+            float: left;
+   width: 20%;
+    height: 145px;
+        }
+        
+         
+         .patientImage{
+             
+             height: 145px;
+    width: 100%;
+             padding:14px;
+         }
+        .patientNameDiv{
+            
+            float: left;
+    
+            font-size: 33px;
+            width: 80%;
+    /* padding-top: 13px; */
+  
+padding: 14px 0 14px 30px;    /* margin-left: 2px; */
+    height: 70px;
+        }
+        
+        .patientDetailsDiv{
+            
+            float: left;
+    width: 80%;
+    /* padding-left: 14px; */
+padding: 0 0 0 30px;  
+  height: 55px;
+        }
+        .patientAgeDiv{
+            float: left;
+    width: 20%;
+    height: 100%;
+        }
+        
+        .patientDOBDiv{
+            float: left;
+    width: 33%;
+    height: 100%;
+            
+        }
+        .patientSSNDiv{
+            float: left;
+    width: 20%;
+    height: 100%;
+            
+        }
+         
+         
+         
+         
+         
+         
+         .detailsHead{
+            
+           font-size:19px; 
+            
+        }
+        .detailsBody{
+            
+            font-size:20px;
+            
+        }
+        .btnAddParameter{
+                /*height: 35%;*/
+                  height:56px;
+        }
+         
+    
+        
+        /*patient details page here*/
+        
+         
+     .patientDetailsContainer{
+       
+    height: 38%;
+    width: 100%;
+    /*min-height: 311px;*/
+
+    }
+
+
+      #tabsAndContents{
+        height:62%;
+        width:100%;
+    }
+      .compliant_status {
+    margin-top: 5%;
+    margin-left: 7%;
+    height: 19px;
+    width: 16px;
+    margin-left: 0;
+}
+
+    .patientBasicDetailsContainer{
+       height: 44%;
+    width: 100%;
+    float: left;
+    background-color:#F0F0F0;
+    border-right: 1px solid #b3b3b3;
+
+    }
+    .patientImageContainer{
+
+    height: 100%;
+    width: 28%;
+    float: left;
+    }
+    .patientNameContainer{
+    height: 60%;
+    width: 60%;
+    float: left;
+    color: #333333;
+    padding-top: 2%;
+    padding-right: 3%;
+    font-size: 190%;
+    font-weight: bold;
+
+    }
+    .patientBasicsContainer{
+    height: 40%;
+  width: 70%;
+    float: left;
+    padding-top: 0%;
+    padding-right: 4%;
+    }
+
+        
+         .circleBorder{
+    height: 81%;
+    width: 76%;
+    margin-left: 10%;
+    margin-top: 9%;
+    border-radius: 50%;
+    border: 2px solid #CECECE;
+    background-color: #F0F0F0;
+         }
+
+
+
+
+         .patientImg {
+   
+     border-radius:50%;
+         width: 94%;
+    height: 91%;
+    margin-top: 4%;
+    margin-left: 3%;
+    padding-top: 0%;
+   
+}
+
+         .buttonsContainer{
+        float: right;
+        padding-top: 8px;
+    }
+
+    .patientBasicsTable{
+        /*height:100%;*/
+        /*width:96%;*/
+            width: 50%;
+    float: left;
+    }
+    .ageColumn{
+        width:20%;
+    }
+    .dobColumn{
+        width:30%;
+    }
+    .idColumn{
+        width:43%;
+    }
+
+    .patientAdditionalDetailsContainer{
+    height: 42%;
+    width: 100%;
+    float: left;
+    background-color: white;
+    border-bottom: 0.75px solid #b3b3b3;
+    position: relative;
+    top: 14%;
+    /*box-shadow: 0 0 10px  #EEEEEE;*/
+    /*box-shadow: 0 0 27px 10px #D9D9D9;
+    box-shadow:1px 10px 2px #EEEEEE;*/
+
+    box-shadow: 1px 11px 19px #EEEEEE;
+    }
+    .patientAdditionalDetailsTable{
+        height:100%;
+        float: left;
+    width: 62%;
+    
+    }
+    .tableRow{
+        width:100%;
+    }
+    .tableData{
+        padding: 0;
+    padding-left: 2%;
+  
+    }
+    .noLeftPadding {
+    padding-left: 0;
+}
+    .physiciansList{
+        float:left;
+        width: 38%;
+    height: 100%;
+    padding: 2%;
+    border-right:0.75px solid #b3b3b3;
+    padding-top: 3%;
+   
+
+    }
+    .borderRight{
+        border-right:0.75px solid #b3b3b3;
+       
+    }
+    .borderBottom{
+        border-bottom:0.75px solid #b3b3b3;
+    }
+   .accordionsContainer{
+        height:14%;
+        float:left;
+        width:100%;
+        position: relative;
+    top: -42%;
+    }
+    .allergyDetailsContainer{
+   height: 100%;
+    width: 100%;
+    float: left;
+    color: white;
+    text-align: center;
+    font-size: 115%;
+    padding-top: 0;
+    font-weight: bold;
+    background-color: #EA384E;
+    display:table;
+
+    }
+
+    .appointmentsContainer{
+
+    height: 50%;
+    width: 100%;
+    float: left;
+    text-align: center;
+    padding-top: 0;
+    font-weight: bold;
+    font-size: 130%;
+    background-color: #E6E6E6;
+    display:table;
+    }
+
+    .detailsAttributeName{
+
+        color:#b3b3b3;
+        font-size:96%;
+        font-weight:bold;
+    }
+
+    .detailsAttributeValue{
+        color:#333333;
+        font-size:105%;
+        font-weight:bold;
+    }
+
+     .medicationValue
+     {
+         
+       /*color:red;*/
+         display:inline;
+     }
+     .glyMedication
+     {
+           
+    color: red;
+  
+    font-size: 100%;
+    float: right;
+
+        margin-top: 2%;
+    
+    position: relative;
+    left: -73%;
+   
+     }
+      
+ 
+        .allDataContainer  {
+    height: 95%;
+    width: 80%;
+     overflow-x:hidden;
+    float: right;
+      overflow-y: hidden;
+    } 
+    .menuBar{
+        float: right;
+    height: 95%;
+    width: 20%;
+    border-right: 1px solid #CCCCCC;
+    }
+    .menuUL{
+        list-style-type:none;
+        padding: 0;
+    margin-bottom: 0;
+    height: 60%;
+    margin-left: 0%;
+    color:#666666;
+    text-align:center;
+    min-height:433px;
+    
+
+    }
+    .menuListItem{
+height: 19%;
+    padding-top: 13%;
+    padding-left: 11%;
+    padding-right: 11%;
+    color: #666666;
+    font-family: MetricWebMedium;
+    font-size: 116%;
+    }
+    .menuItemName{
+      margin-left: 0;
+    
+    float: left;
+    width: 100%;
+    font-size: 100%;
+        margin-top: 3%;
+   
+    }
+    .menuIcon{
+        font-size: 135%;
+        
+
+    }
+
+
+
+
+
+
+      .accordionsAllergyGlyphicon{
+           float:none;
+         position:relative;
+         right:2%;
+         top:0%;
+         display:table-cell;
+         vertical-align:middle;
+
+      }
+      .accordionsAppointmentGlyphicon{
+           float:none;
+         position:relative;
+         right:3%;
+         top:0%;
+         display:table-cell;
+         vertical-align:middle;
+
+      }
+
+
+       .accordionAllergyData{
+           display:table-cell;
+           vertical-align:middle;
+           margin-bottom:0;
+           padding:0;
+
+    }
+    .accordionAppointmentData{
+
+         display:table-cell;
+           vertical-align:middle;
+           margin-bottom:0;
+           padding:0;
+    }
+
+   .nav-tabs.nav-justified>li {
+    float: none;
+    display: table-cell;
+    width: 1%;
+}
+    .patientTabsForMobile{
+
+        display:none;
+    }
+    .patientDetailsPageTabs {
+    height: 56%;
+    min-height: 386px;
+}
+
+
+
+
+    /*lab pop up*/
+
+    .dateOfTestRow{
+    text-align: left;
+    font-size: 100%;
+    font-weight: bold;
+}
+
+.dateImported{
+    text-align: left;
+    font-size: 100%;
+    font-weight: bold;
+    padding-bottom: 4px;
+}
+
+.labTableDetails
+{
+    margin-top:20px;
+    font-size:118%;
+}
+
+.labTable1{
+font-weight: bold;
+    font-size: 96%;
+    margin-right: 6px;
+    float: left;
+    width: 34%;
+}
+.labTable2{
+  font-size: 100%;
+    float: left;
+    /* margin-left: 11px; */
+    width: 28%;
+    margin-right: 9px;
+    font-weight: bold;
+}
+.labTable3{
+    margin-left: 11px;
+    width: 35%;
+    font-size: 98%;
+    font-weight: bold;
+}
+
+
+
+.resCodeTable{
+    width: 50%;
+    float: left;
+
+}
+
+.resCodeColumn{
+
+}
+
+.modal-dialog {
+    width: auto;
+    margin: 30px auto;
+    max-width:750px;
+}
+.medicalComplianceTable{
+    float: left;
+   
+    display: inline-block;
+}
+.paddingTop{
+    padding-top:0px;
+}
+.verticalAlignment{
+    vertical-align:middle;
+}
+
+.modalContentLaboratory{
+      height: 100%;
+    margin-top: 0;
+}
+    .modalContentPatientDetails {
+           margin-top: 0;
+    top: calc((100% - 320px)/2);
+    }
+
+    .laboratoryModalDialog{
+        margin-top:45px;
+    }
+    .allergyModalDialog{
+    margin-bottom: 0;
+  
+    margin-top: 0;
+}
+.allergyModalContent{
+    height:320px;
+}
+.medicalConsultationMainModal{
+    overflow-y:hidden;
+}
+.medicalConsultationModalDialog{
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 100%;
+}
+.medicalConsultationModalContent{
+    height: 418px;
+    top: calc((100% - 418px)/2);
+}
+}
+
+     @media screen and (min-width: 0px) and (max-width:319px) {
+
+
+.generalPageContainers{
+    overflow:auto;
+}
+
+         .pageTitles 
+    {
+    font-size: 130%;
+    margin-top: 0px;
+    margin-bottom: 0;
+    }
+    .detailsHead
+    {
+    color: grey;
+    font-size: 89%;
+    font-family: MetricWebMedium;  
+    }
+        
+    .searchLabel 
+    {
+    text-align: center;
+    padding-top: 8px;
+    color: white;
+    font-size: 135%;
+    font-family: MetricWebLight;
+    }
+      
+    .searchInp
+    {
+    margin-left: 17%;
+    margin-top: 7px;
+    height: 44px;
+    width: 212px;
+    font-family: MetricWebMedium; 
+    
+    }
+
+   .resultsCount
+    {
+    color: grey;
+    font-size: 176%;
+    margin-left: 20px;
+    padding-top: 4px;
+    padding-bottom: 4px;           
+    font-family: MetricWebThin;
+    }
+    .btnSearch
+    {
+    margin-left: 17%;
+    margin-top: 41px;
+    height: 44px;
+    width: 212px;
+    }
+    .searchContent 
+    {
+    height:70%;
+    width: 100%;
+    background-color: #00A982;      
+    }
+        
+   .inputForms
+    {
+    height:61%;
+    }
+    .btnAddParameter {
+    margin-left: -2.5%;
+    width: 11%;
+    margin-top: 6%;
+    height: 23%;
+    font-size: 139%;
+}
+    .btnAddParameterOpt {
+    visibility: visible;
+    width: 54%;
+    margin-left: 18%;
+    margin-top: 6%;
+    height: 23%;
+    border-radius: 0;
+    border: 2px solid white;
+    background-color: #00a982;
+    font-size: 105%;
+    font-family: MetricWebMedium;
+}
+    .patientSearchPagePageHeader 
+    {   
+    border-bottom-width: 1px;
+    height:45px;
+    min-width:257px;
+    }
+    .patientSearchPagePageHeader a 
+    {   
+    left: 12px;
+    top: 7px;
+    font-size: 24px;
+    }
+       
+    .page-wrap 
+    {
+    float: right;
+    width: 100%;
+    transition: width 0.3s ease;
+    overflow: hidden;
+    }
+   .main-nav 
+    {
+    position: fixed;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: #425563;
+    overflow-y: auto;
+    transition: width 0.3s ease;
+    white-space: nowrap;
+    overflow-x: hidden;
+    font-size:80%;
+    }
+
+.main-nav ul li {
+  display: block;
+
+  color: white;
+
+    list-style-type: none;
+   line-height: 52px;
+    padding-left: 29px;
+    
+}
+      .main-nav ul{
+          
+          font-size: 135%;
+          padding-left:0;
+      }
+
+      /*.main-nav ul li:hover {
+          
+          background: #2F434E;
+          
+          
+      }*/
+
+.main-nav:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 4px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+}
+
+/*.content {
+  padding: 100px 20px 20px 20px;
+  max-width: 900px;
+}*/
+
+.close-menu {
+  display: none;
+}
+
+#main-nav:target {
+  width: 226px;
+}
+
+#main-nav:target + .page-wrap {
+
+    width: 100%;
+    /* left: 281px; */
+    overflow: hidden;
+}
+
+#main-nav:target + .page-wrap .close-menu {
+  display: block;
+}
+
+#main-nav:target + .page-wrap .patientSearchPagePageHeader ,#main-nav:target + .page-wrap .searchPatientPageBody,#main-nav:target + .page-wrap .patientSearchPageFooter {
+/*  width: 70%;*/
+/* left: 30%;*/
+    margin-left:226px;
+    overflow:hidden;
+    
+}
+   .notificationSymbolClass{
+          
+    background: transparent;
+    border: none;
+    float: right;    
+          
+          
+      }       
+       
+    .fa-2x {
+   font-size: 1.7em;
+    color: white;
+    padding: 12px;
+      }
+      
+      .sideBarGlyph{
+          
+          padding-right:21px;
+      }
+      
+      .sideBarText{
+          
+          padding-left: 6%;
+          
+      }
+      .sideBarLogoClass{
+          
+      position: absolute;
+    bottom: 6%;
+    left: 29px;
+    display:block;    
+      }
+#patientSearchPage{
+    background-color:white;
+                background-size: cover;
+    height: 100%;
+    width: 100%;
+    min-width:257px;
+}
+
+/*.patientSearchPagePageHeader{
+    height: 7%;
+    width: 100%;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: black;
+    font-family: SansPro;
+    background-color: #00A982;
+}*/
+
+.headderContentTable
+{
+    height: 100%;
+    width: 100%;
+}
+.floatLeft
+{
+    float: left;
+}
+/*.searchPatientPageBody{
+      height: 78%;
+    font-family: SansPro;
+  }*/
+.patientSearchUtils
+{overflow-x:auto;
+/* overflow-y:scroll;*/
+    height: 100%;
+}
+
+
+.patientSearchPageFooter
+{
+height:15%;
+    
+    
+}
+    
+.patientSearch-utils-spacing
+    {
+        
+        
+        height:100%;
+    }
+        
+        
+        
+        .searchInp {
+            
+            
+            
+            width:64%;
+            margin-left:18%;
+            margin-right:18%;
+            height:20%;
+             font-family: MetricWebMedium; 
+        }    
+      
+        .searchButton{
+            
+            
+            height:20%;
+        }
+        .btnSearch {
+    height: 70%;
+    width: 63%;
+    margin-top: 2%;
+    margin-left: 18%;
+}
+       
+        .inputForms{
+            
+            height:61%;
+        }
+        .addedInput{
+                width: 64%;
+    margin-left: 18%;
+    margin-right: 18%;
+    margin-top: 3%;
+    height: 20%;
+        font-family: MetricWebMedium;      
+            
+        }
+        
+        .newInp {
+    width: 64%;
+    margin-left: 18%;
+    margin-right: 18%;
+    margin-top: 3.5%;
+    height: 20%;
+     font-family: MetricWebMedium; 
+}
+        
+        
+        
+        
+        
+        
+        .patientDataTable{
+            
+            width:100%;
+        }
+        
+        
+        .patientDataRow{
+            
+     height: 145px;
+    width: 100%;
+        }
+        
+        .patientDataMainDiv{
+            
+           height: 165px;
+    width: 100%; 
+            
+        }
+        .patientImageDiv{
+            
+            float: left;
+  width: 31%;
+            padding-left:11px;
+    height: 100px;
+        }
+        
+        .patientNameDiv{
+            padding: 0;
+            float: left;
+      height: 55px;
+    width: 69%;
+            font-size: 20px;
+        }
+        
+        .patientDetailsDiv{
+          padding:0;  
+            float: left;
+    height: 85px;
+    width: 67%;
+        }
+        .patientAgeDiv{
+            float: left;
+    width: 50%;
+    height: 42px;
+        }
+        
+        .patientDOBDiv{
+           float: left;
+    width: 50%;
+    height: 42px;
+            
+        }
+        .patientSSNDiv{
+            float: left;
+    width: 50%;
+    height: 42px;
+            
+        }
+        .detailsBody
+        {
+            font-size:100%;
+            
+        }
+        .patientImage{
+            
+            padding: 0;
+    width: 85%;
+    height: 69px;
+        } 
+
+
+
+
+
+
+
+        .openSideBar{
+    width: 226px;
+}
+.movePatientSearchScreen{
+    margin-left:226px;
+    overflow:hidden;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.patientDetailsPagePageHeader{
+    min-width: 257px;
+}
+
+
+
+          /*patient details page here*/
+        
+         
+     .patientDetailsContainer{
+       
+          height: 60%;
+    width: 100%;
+        min-width: 257px;
+
+    }
+
+    .patientBasicDetailsContainer{
+     height: 70%;
+    width: 100%;
+    float: left;
+    background-color:#F0F0F0;
+    border-right: 0;
+
+    }
+    .patientImageContainer{
+
+    height: 50%;
+    
+   
+    width: 100%;
+    }
+    .patientImg {
+    margin-top: 5%;
+    width: 30%;
+    height: 70%;
+    /* padding-top: 10%; */
+    margin-left: 34%;
+    padding:0;
+}
+    .patientNameContainer{
+    height: 30%;
+    width: 90%;
+   
+    color: #333333;
+   
+    font-size: 200%;
+    font-weight: bold;
+    text-align: center;
+    padding: 0;
+    margin-left: 5%;
+    line-height:108%;
+
+
+    }
+    .patientBasicsContainer{
+    height: 20%;
+   
+    padding-top: 0%;
+    padding-right: 0%;
+    width: 90%;
+    margin-left: 5%;
+    }
+    .patientBasicsTable{
+        /*height:100%;*/
+        width:100%;
+    }
+    .ageColumn{
+        width:30%;
+    }
+    .dobColumn{
+        width:45%;
+    }
+    .idColumn{
+        width:25%;
+    }
+    .patientAdditionalDetailsContainer{
+
+       height: 40%;
+    width: 100%;
+    float: left;
+    background-color:white;
+    border-bottom: 0.75px solid #b3b3b3;
+    position: relative;
+    top: 20%;
+    display:none;
+    }
+    .patientAdditionalDetailsTable{
+        height:100%;
+        float: left;
+    width: 62%;
+    
+    }
+    .tableRow{
+        width:100%;
+    }
+    .tableData{
+        padding:2%;
+
+    }
+    .physiciansList{
+        float:left;
+        width: 38%;
+    height: 100%;
+    padding: 2%;
+    border-right:0.75px solid #b3b3b3;
+
+
+    }
+    .borderRight{
+        border-right:0.75px solid #b3b3b3;
+       
+    }
+    .borderBottom{
+        border-bottom:0.75px solid #b3b3b3;
+    }
+   .accordionsContainer{
+        height:30%;
+        float:left;
+        width:100%;
+        position: relative;
+    top: 0%;
+    }
+
+   .accordionAllergyData{
+     
+    margin-bottom: 0;
+    /* vertical-align: middle; */
+    /* line-height: 300%; */
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 90%;
+     padding: 0 11px;
+
+   }
+   .accordionAppointmentData{
+       margin-bottom: 0;
+    /* vertical-align: middle; */
+    /* line-height: 300%; */
+    display: table-cell;
+    vertical-align: middle;
+   font-size: 90%;
+    padding: 0 11px;
+
+
+   }
+    .allergyDetailsContainer{
+    height: 50%;
+    width: 100%;
+    float: left;
+    color: white;
+    text-align: center;
+   /*font-size: 88%;*/
+    padding-top: 0;
+    font-weight: bold;
+    background-color: #00A982;
+    display: table;
+
+    }
+
+    .appointmentsContainer{
+
+    height: 50%;
+    width: 100%;
+    float: left;
+    text-align: center;
+    padding-top: 0;
+    font-weight: bold;
+    /*font-size: 88%;*/
+    background-color: #E6E6E6;
+    display:table;
+    }
+
+    .detailsAttributeName{
+
+        color:#b3b3b3;
+        font-size:105%;
+        font-weight:bold;
+    }
+
+    .detailsAttributeValue{
+        color:#333333;
+        font-size:110%;
+        font-weight:bold;
+    }
+
+     .medicationValue
+     {
+         
+       /*color:red;*/
+         display:inline;
+     }
+     .glyMedication
+     {
+           
+    color: red;
+  
+    font-size: 100%;
+    float: right;
+
+        margin-top: 2%;
+    
+    position: relative;
+    left: -73%;
+   
+     }
+      
+
+      .accordionsAllergyGlyphicon{
+          
+        float:none;
+        position:none;
+        top:0;
+         right:1%;
+    /* display: table-cell; */
+    /* vertical-align: middle; */
+
+ display: table-cell;
+    vertical-align: middle;
+      }
+      .accordionsAppointmentGlyphicon{
+
+        float:none;
+        position:none;
+        top:0;
+         right:2%;
+    /* display: table-cell; */
+    /* vertical-align: middle; */
+
+ display: table-cell;
+    vertical-align: middle;
+      }
+
+
+  
+
+     .patientBasicsTable td{
+          text-align:center;
+      }
+
+
+
+
+
+     
+
+
+     .patientDetailsPageTabs{
+display:none;
+     }
+     .segmentIndicator{
+             height: 20px;
+             border-bottom:1px solid #D3D3D3;
+             background-color:#F0F0F0;
+                 min-width: 257px;
+     }
+
+     .patientTabsForMobile{
+         display:block;
+         height:26%;
+         width:100%;
+         overflow-y:scroll;
+             min-width: 257px;
+         
+     }
+
+     .patientTabsForMobile ul{
+         height:100%;
+         width:100%;
+         padding:0;
+
+     }
+      .patientTabsForMobile ul li{
+          width:100%;
+          list-style-type:none;
+          border-bottom:1px solid #D3D3D3;
+          height:45%;
+          color:#333333;
+          font-weight:bold;
+         
+
+          
+      }
+        .patientTabsForMobile ul li img {
+    height: 39%;
+    width: 7%;
+    margin-left: 4%;
+    float: left;
+    margin-top: 5%;
+        }
+         .patientTabsForMobile ul li p{
+     margin-bottom: 0;
+    float: left;
+    /* width: 72%; */
+    text-align: left;
+    margin-left: 9%;
+    margin-top: 6%;
+    font-size: 120%;
+    display: inline;
+
+         }
+         .listViewGlyphicon{
+    font-size: 149%;
+    color: #CDCDCD;
+    /* margin-right: -13%; */
+    right: 12px;
+    float: right;
+    margin-top: 6%;
+         }
+
+
+   .tabSelectionPage{
+    height:100%;
+    width:100%;
+}
+
+.tabPageHeader{
+    height:10%;
+    width:100%;
+    background-color:white;
+    color:black;
+    border-bottom:2px solid #00A980;
+
+}
+.patientInfoHeader{
+    height:20%;
+    width:100%;
+    background-color:#F0F0F0;
+    border-bottom:1px solid #B3B3B3;
+   
+   
+
+}  
+#selectedTemplate{
+    height:70%;
+    width:100%;
+    background-color:white;    
+}
+.patientInfoContainer{
+    height:100%;
+    width:100%;
+}
+.patientBasicInfo{
+    height:100%;
+    width:100%;
+    padding:4%;
+}
+
+.patientPic{
+    float:left;
+    height:100%;
+    width:30%;
+    padding-right: 5%;
+}
+.patientPhoto{
+    width:100%;
+    height:100%;
+}
+.patientName{
+    float:left;
+    height:50%;
+    width:70%;
+    font-size: 106%;
+    font-weight: bold;
+    font-family: MetricWebRegular;
+
+}
+
+.patientBasicsHolder{
+float:left;
+height:50%;
+width:70%;
+font-family: MetricWebMedium;
+}
+.patientBasicsDataTable{
+    width:100%;
+    height:100%;
+}
+.patientBasicDataName{
+    color:#B3B3B3;
+    font-size: 91%;
+   width:100%;
+  
+    font-family: MetricWebMedium;
+
+}
+.patientBasicDataValue{
+    color:#333333;
+    font-size: 107%;
+}
+
+.ageDataColumn{
+    width:30%;
+}
+.dobDataColumn{
+width:40%;
+}
+.idDataColumn{
+width:30%;
+}
+
+
+
+
+
+
+
+
+
+     }
+    
+                
+
+
+
+

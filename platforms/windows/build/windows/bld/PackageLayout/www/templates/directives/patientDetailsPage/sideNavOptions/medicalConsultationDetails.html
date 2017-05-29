@@ -1,0 +1,177 @@
+﻿<div ng-controller="medicalConsultationCtrl" class="medicalConsultationContainer">
+    <div class="medicalConsultationPage">
+        <table class="consultationTable">
+            <thead>
+                <tr>
+                    <th class="detailsAttributeName">Date Recorded:</th>
+                    <th class="detailsAttributeName">By:</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="detailsAttributeBody">{{consultationDetails.date}}</td>
+                    <td class="detailsAttributeBody">{{consultationDetails.recordedBy }}</td>
+
+                </tr>
+
+
+            </tbody>
+
+
+        </table>
+        <div class="buttonsContainer">
+
+            <button type="button" class="btn btn-default editBtn" data-toggle="modal" data-target="#myModal1">
+                <span class="glyphicon glyphicon-pencil myGlyphicon"></span>Edit
+            </button>
+            <button type="button" class="btn btn-default addBtn" data-toggle="modal" data-target="#myModal2">
+
+                <span class="glyphicon glyphicon-plus myGlyphicon" style=" top: -1px;"></span>Create New
+            </button>
+        </div>
+        <div class="modal fade medicalConsultationMainModal" id="myModal2" role="dialog">
+            <div class="modal-dialog medicalConsultationModalDialog">
+
+                <!-- Modal content-->
+                <div class="modal-content modalContent medicalConsultationModalContent">
+                    <div class="modal-header medicalConsltHeader">
+
+                        <!--<button type="button" class="close" data-dismiss="modal">&times;</button>-->
+                        <h4 class="modal-title medicalConsltTitle">Create New Medical Consultation</h4>
+                        <button type="button" class="btn btn-default btnDismissMedicalConslt" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></button>
+
+
+
+                    </div>
+                    <div class="modal-body medicalConsltBody ">
+                        <div class="medicalConsltDetails">
+                            <div class="medicalConsltImageContainer" ng-bind-html="patientImageSource">
+
+                                <img src="assets/images/profilepic.png" class="medicalConsltPatientImg" />
+
+                            </div>
+                            <div class="medicalConsltPatientName" style="width: 65%;">
+                                {{patientData.patientDemographicsData.name}}
+                            </div>
+                            <div class="medicalConsltBasicsContainer">
+                                <table class="medicalConsltBasicsTable">
+
+                                    <tr>
+                                        <td class="medicalConsltAttributeName ageColumn">Age:</td>
+                                        <td class="medicalConsltAttributeName dobColumn">Date of Birth:</td>
+                                        <td class="medicalConsltAttributeName idColumn">ID Number:</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="medicalConsltAttributeValue ageColumn">{{patientData.patientBasicData.age}}</td>
+                                        <td class="medicalConsltAttributeValue dobColumn">{{patientData.patientDemographicsData.dob}}</td>
+                                        <td class="medicalConsltAttributeValue idColumn">{{patientData.patientBasicData.IDNumber}}</td>
+                                    </tr>
+
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="medicalConsltTxtArea">
+                            <textarea class="form-control" rows="10" id="comment" ng-model="noteText" placeholder="Enter your text here.." style="height: 100%;"></textarea>
+
+
+
+
+
+                        </div>
+                        <div class="modal-footer medicalConsltFooter modalMedicalConsultationFooter">
+                            <button type="button" class="btn btn-default btnMedicalConsltCancel" data-dismiss="modal" ng-click="onCreateNewCancelClicked()">CANCEL</button>
+                            <button type="button" class="btn btn-default btnMedicalConsltSave" data-dismiss="modal" ng-click="onSaveClicked()">SAVE</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div class="modal fade medicalConsultationMainModal" id="myModal1" role="dialog">
+            <div class="modal-dialog medicalConsultationModalDialog">
+
+                <!-- Modal content-->
+                <div class="modal-content modalContent medicalConsultationModalContent">
+                    <div class="modal-header medicalConsltHeader">
+
+                        <!--<button type="button" class="close" data-dismiss="modal">&times;</button>-->
+                        <h4 class="modal-title medicalConsltTitle">Edit Medical Consultation</h4>
+                        <button type="button" class="btn btn-default btnDismissMedicalConslt" data-dismiss="modal">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </button>
+
+
+
+                    </div>
+                    <div class="modal-body medicalConsltBody ">
+                        <div class="medicalConsltDetails">
+                            <div class="medicalConsltImageContainer" ng-bind-html="patientImageSource">
+
+                                <img src="assets/images/profilepic.png" class="medicalConsltPatientImg" />
+
+                            </div>
+                            <div class="medicalConsltPatientName" style="width: 65%;">
+                                {{patientData.patientDemographicsData.name}}
+                            </div>
+                            <div class="medicalConsltBasicsContainer">
+                                <table class="medicalConsltBasicsTable">
+
+                                    <tr>
+                                        <td class="medicalConsltAttributeName ageColumn">Age:</td>
+                                        <td class="medicalConsltAttributeName dobColumn">Date of Birth:</td>
+                                        <td class="medicalConsltAttributeName idColumn">ID Number:</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="medicalConsltAttributeValue ageColumn">{{patientData.patientBasicData.age}}</td>
+                                        <td class="medicalConsltAttributeValue dobColumn">{{patientData.patientDemographicsData.dob}}</td>
+                                        <td class="medicalConsltAttributeValue idColumn">{{patientData.patientBasicData.IDNumber}}</td>
+                                    </tr>
+
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="medicalConsltTxtArea">
+                            <textarea class="form-control" rows="10" id="comment" style="height: 100%;" ng-model="noteTextEdit">
+                                {{consultationDetails.text}}
+                            </textarea>
+
+
+
+
+
+                        </div>
+                        <div class="modal-footer medicalConsltFooter modalMedicalConsultationFooter">
+                            <button type="button" class="btn btn-default btnMedicalConsltCancel" data-dismiss="modal" ng-click="onEditCancelClicked()">CANCEL</button>
+                            <button type="button" class="btn btn-default btnMedicalConsltSave" data-dismiss="modal" ng-click="onEditDoneClicked()">SAVE</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="medicalConsultNotes">
+            <p class=" notesAlign medicalNoteHeading"> Medical Consultation Note,e.g.SOAP</p>
+
+            <div class="notesAlign" style="white-space:pre-wrap;margin-bottom:30px">{{consultationDetails.text}}</div>
+
+            <!-- <p class="notesAlign">{{consultationDetails.text}}</p>-->
+
+        </div>
+
+
+    </div>
+
+
+
+
+</div>

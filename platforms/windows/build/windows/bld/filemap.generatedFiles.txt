@@ -1,0 +1,6 @@
+build\windows\bld\filemap.pri
+build\windows\bld\filemap.map.txt
+build\windows\bld\filemap.scale-140.pri
+build\windows\bld\filemap.scale-140.map.txt
+build\windows\bld\filemap.scale-180.pri
+build\windows\bld\filemap.scale-180.map.txt

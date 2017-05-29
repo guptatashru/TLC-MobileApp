@@ -1,0 +1,29 @@
+{
+"latestvitals": {    
+"type":"Vitals",
+"id": 552,
+"date": "2016-03-17T00:00:00",
+"patientID": 1,
+"bps": "12",
+"bpd": "7",
+"weight": 43,
+"height": 8,
+"temperature": 32,
+"temperatureMethod": null,
+"pulse": 67,
+"respiration": 7,
+"note": null,
+"bmi": null,
+"bmiStatus": null,
+"waistCirculation": null,
+"headCirculation": null,
+"oxygenSaturaton": 67,
+"consciousness": null,
+"glucoseMmol": 0,
+"inspiredO2Per": 7,
+"painScore": 0,
+"urineOutput": 78,
+"monitoringFrequency": null,
+"escalationPlan": false
+}
+}

@@ -1,0 +1,45 @@
+{
+    "servers": { 
+      
+		 "Server": "http://tlcdev.cloudapp.net/api"
+		      
+
+    },
+    "url": {
+
+	 "patientNameSearchUrl": "/getPatients?name=",
+        "patientMedicationsUrl": "/getMedication?",
+        "patientObservationsUrl": "/getObservations?",
+       "patientMedicalConsultationsUrl":"/getConsultation?",
+	   "patientDemographicsUrl":"/getDemographics?",
+	   "patientObservationsVitalsUrl":"/getObservationDetails/Vitals?",
+	   "patientObservationsECGUrl":"/getObservationDetails/ECG?",
+	   "patientAllergiesUrl":"/getHealthConcerns?",
+	    "patientObservationsINRUrl":"/getObservationDetails/INR?",
+"patientObservationsECGUrl":"/getObservationDetails/ECG?",
+ "patientObservationsSpirometerUrl":"/getObservationDetails/Spirometer?",
+"patientConsultationNotesCreate": "/createConsultation?",
+        "patientConsultationNotesEdit": "/updateConsultation?",
+        "patientMedicalHistoryUrl": "/getHealthConcerns?",   
+"patientLabUrl":"/getLabs?",     
+"chartTypesUrl":"/getChartTypes",
+"chartValuesUrl":"/getChartValues?",
+"patientSearchUrl":"/getPatients",
+  "patientLabDetailsUrl": "/getLabDetails?",
+ 
+        "logoutUrl": "/authentication/LogOut",
+        "patientIdSearchUrl": "/Patient/",
+      
+        "patientGenderSearchUrl": "/Patient/gender/",
+        "patientDateSearchUrl": "/Patient/date/",
+        "patientDetailsUrl": "/patient/details/",
+       
+        
+        "patientUploadUrl": "/patient",
+        
+       
+        
+        "dataSyncUrl": "/sync/",
+        "loginUrl":  "/authentication"
+    }
+}

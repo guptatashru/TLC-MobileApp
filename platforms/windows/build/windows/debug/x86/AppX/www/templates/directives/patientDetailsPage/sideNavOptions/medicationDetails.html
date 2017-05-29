@@ -1,0 +1,119 @@
+﻿
+<div class="medicationDetailsContainer" ng-controller="medicationDetailsController">
+    <div class="medicationHeading">
+        <table class="medicationHeadingTable">
+            <thead class="medicationtHead">
+                <tr class="medicationHeadRow">
+                    <th class="medicationHeadingTableHead">Sort By:</th>
+                    <th>Filter By:</th>
+                    <th style="padding-left: 1%;">Legend:</th>
+                </tr>
+            </thead>
+            <tbody class="medicationtBody">
+                <tr>
+                    <td class="medicationDropdown">
+                        <div class="input-group btn-group medDropdownDiv" dropdown is-open="status.isopen">
+                            <button type="button" class="btn btn-default dropdown-toggle btn-full-length sortByBtn" dropdown-toggle ng-disabled="searchDesabled">
+                                {{prescSelectedDate|date:'MM-dd-yyyy'}}<span class="caret sortByBtnCaret"></span>
+                            </button>
+                            <ul class="dropdown-menu btn-full-length btnMedDropdownUL" role="menu">
+                                <li ng-repeat="prescDate in prescDatesArray  track by $index"><a ng-click="prescDateClicked(prescDate)">{{prescDate|date:'MM-dd-yyyy'}}</a></li>
+                                
+                            </ul>
+                        </div>
+                    </td>
+                    <td class="medicationInputTextBox">
+                        <input type="text" class="form-control medicationFilterTextBox" placeholder="Enter a medication" ng-model="medicationName"/>
+                    </td>
+                    <td class="medicationGlyphicons">
+                        <table class="status_glyphicons">
+                            <tr>
+                                <td style="width:17%"><img src="assets/images/started.png" class="status_icons" /></td>
+                                <td><img src="assets/images/not-compliant-row-legend.png" class="status_icons" /></td>
+                                <td><img src="assets/images/future.png" class="status_icons" /></td>
+                                <td ><img src="assets/images/stopped.png" class="status_icons" /></td>
+                            </tr>
+                            <tr>
+                                <td style="width:17%">Started</td>
+                                <td>Not Compliant</td>
+                                <td>Future</td>
+                                <td >Stopped</td>
+                            </tr>
+                        </table>
+                       
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+    </div>
+    <div class="medicationTable">
+        <div class="medicationTableHeadingRow">
+            <button class="btn btn-default genericNameHeadingGly"><span class="glyphicon glyphicon-plus glyphiconFullHeightWidth"></span></button>
+            <p class="pTagNoBottomMargin genNameHead">Generic Name</p>
+            <p class="pTagNoBottomMargin drugNameHead">Name of Drug</p>
+            <p class="pTagNoBottomMargin dosageHead">Dose</p>
+            <p class="pTagNoBottomMargin legendPlaceHolder"></p>
+        </div>
+        <div class="medicinesContainer">
+            <div class="singleMedRow" ng-repeat="medication in medicationDetails| filter:medicationName">
+                <div class="medicineDetailsRow">
+                    <button class="btn btn-default btnExpand genericName" ng-click="onPlusClicked($index)"><span class="glyphicon " ng-class="setPlusMinusSymbolClass($index)" ng-style="setPlusMinusButtonStyle($index)"></span></button>
+                    <p class="pTagNoBottomMargin genName">{{medication.genericName|textFormat}}</p>
+                    <p class="pTagNoBottomMargin drugName">{{medication.drugName|textFormat}}</p>
+                    <p class="pTagNoBottomMargin dosage">{{medication.dose|textFormat}}</p>
+                    <div class="med_status_glyphs">
+                        <div class="stat_Glyph" ng-switch="stat" ng-repeat="stat in medication.status" ng-class="{'lastGlyph':$last}">
+                            <img src="assets/images/started.png" class="med_status" ng-switch-when="started" />
+                            <img src="assets/images/not-compliant-row-legend.png" class="med_status" ng-switch-when="not_compliant" />
+                            <img src="assets/images/future.png" class="med_status" ng-switch-when="future" />
+                            <img src="assets/images/stopped.png" class="med_status" ng-switch-when="stopped" />
+                           
+                        </div>
+                    </div>
+                </div>
+                <div class="displayDetails" ng-style="setDisplayDetailsStyle($index)">
+                    <div class="startDurationMethodDiv">
+                        <div class="startClass">
+                            <p class="pTagNoBottomMargin leftAlign"><span class="detailTitle">Start:</span><span class="detailVal">{{medication.start|date:'MM-dd-yyyy'}}</span></p>
+                        </div>
+                        <div class="durationClass">
+                            <p class="pTagNoBottomMargin leftAlign"><span class="detailTitle">Duration:</span><span class="detailVal">{{medication.duration|textFormat}}</span></p>
+                        </div>
+                        <div class="methodClass">
+                            <p class="pTagNoBottomMargin leftAlign"><span class="detailTitle">Method:</span><span class="detailVal">{{medication.method}}</span></p>
+                        </div>
+                    </div>
+                    <div class="directionPNRMedDiv">
+                        <div class="directionClass">
+                            <p class="pTagNoBottomMargin leftAlign"><span class="detailTitle">Direction:</span><span class="detailVal">{{medication.direction}}</span></p>
+                        </div>
+
+                        <div class="PNRMedicationClass">
+                            <p class="pTagNoBottomMargin leftAlign">
+                                <span class="detailTitle">Medication Type:</span><span class="detailVal" ng-if="medication.PNR_Medication==true">PNR</span><span class="detailVal" ng-if="medication.Special_Course==true">SC</span>
+                              <span class="detailVal" ng-if="medication.Regular_Prescription_drug==true">RPD</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timesOfDayDiv">
+                        <p class="pTagNoBottomMargin leftAlign">
+                            <span class="detailTitle timesOfDay">Times of Day:</span>
+                            <span class="timeIndicator">{{medication.TOD1}}</span>
+                            <span class="timeIndicator">{{medication.TOD2}}</span>
+                            <span class="timeIndicator">{{medication.TOD3}}</span>
+                            <span class="timeIndicator">{{medication.TOD4}}</span>
+                            <span class="timeIndicator">{{medication.TOD5}}</span>
+                            <span class="timeIndicator">{{medication.TOD6}}</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

@@ -1,0 +1,3 @@
+C:\TeleHealthCare\plugins\io.litehelpers.cordova.sqlcipher\src\windows\SQLite3-WinRT\SQLite3\SQLite3.Windows\SQLite3.Windows.vcxproj;x86
+C:\Users\raovars\cordovaProjects\hello12\TeleHealthCare-TLC-Branch\platforms\windows\CordovaApp.Windows.jsproj;x86
+C:\Users\raovars\cordovaProjects\hello12\TeleHealthCare-TLC-Branch\plugins\io.litehelpers.cordova.sqlcipher\src\windows\SQLite3-WinRT\SQLite3\SQLite3.Windows\SQLite3.Windows.vcxproj;x86

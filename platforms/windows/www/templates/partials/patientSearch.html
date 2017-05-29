@@ -1,0 +1,56 @@
+<div class="generalPageContainers" mn-touch swipe-right="navAppear = false" swipe-left="navAppear = true">
+  
+ <div class="loadingGifContainer" id="pageLoadingGif" ng-style="loaderGifClass">
+        <div class="loadingGif"></div>
+ </div>
+    
+    <div id="patientSearchPage">
+	
+	<nav class="main-nav" id="main-nav">
+    <ul> 
+        <li class="listItems"></li>
+        <li ng-click="searchClicked()"  ng-style="menuSearchBtnStyle"><span class="glyphicon glyphicon-search"></span><span class="sideBarText">Search</span></li>
+       
+        <li ng-click="logoutClicked()" ng-style="menuLogoutBtnStyle"><span class="glyphicon glyphicon-share"></span><span class="sideBarText">Logout</span></li>
+    </ul>
+      
+       <img src="assets/images/Logo_SideBar.jpg" class="sideBarLogoClass" />
+    </nav>
+	
+	 <div class="page-wrap">
+         <div class="patientSearchPagePageHeader">
+            <div class="headderContentTable">
+                <div class="imageContainerDiv floatLeft">
+                     <a ng-click="menuOpen()">&#9776;</a>
+                    <a href="#" class="close-menu">&#9776;</a>
+                </div>
+                <div class="textContainerDiv floatLeft">
+                    <button class="headderTextClass" disabled>
+                        <p class="pageTitles">TeleHealthCare</p>
+                    </button>
+                </div>
+                <div class="imageContainerDiv floatLeft">
+                      <button class="notificationSymbolClass" enabled>
+                       
+                    </button>
+                </div>
+            </div>
+        </div>
+		
+		
+        
+        <div class="searchPatientPageBody">
+            <div class="patientSearchUtils">
+                <select-patient></select-patient>
+                
+            </div>
+        </div>
+
+
+        <div class="patientSearchPageFooter">
+
+        </div>
+		</div>
+
+    </div>
+</div>

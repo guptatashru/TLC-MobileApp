@@ -1,0 +1,31 @@
+
+<div class="bannerClass">
+    <p class="bannerTitle">Tele<b class="healthBold">Health</b>Care</p>
+    <p class="bannerContent">Bringing Affordable<br> Healthcare</p>
+</div>
+<div class="loginMenu">
+    <div class="loginMessage">
+        <p class="loginMessageText" ng-style="loginMessageStyleClass">{{loginMessage}}</p>
+    </div>
+    <form>
+        <div class="group grp_username">
+            <input type="text" class="txtDetails" ng-model="username" ng-keydown="keyDownEvent($event)" ng-disabled="loginButtonDisabled">
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label class="lbl">Username</label>
+        </div>
+
+        <div class="group grp_password">
+            <input type="password" class="txtDetails" ng-model="password" ng-keydown="keyDownEvent($event)" ng-disabled="loginButtonDisabled">
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label class="lbl">Password</label>
+        </div>
+
+        <button type="submit" class="btn btn-block btnLogin" ng-click="onLoginClicked()" ng-disabled="loginButtonDisabled">
+            <b>{{buttonText}}</b>
+        </button>
+
+    </form>
+
+</div>

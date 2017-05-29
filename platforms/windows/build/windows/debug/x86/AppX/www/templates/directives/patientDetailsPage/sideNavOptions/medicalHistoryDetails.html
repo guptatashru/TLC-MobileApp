@@ -1,0 +1,94 @@
+﻿
+
+
+
+<div class="medicalHistoryDetailsContainer" ng-controller="medicalHistoryDetailsController">
+    <div class="medicalHistoryClass" ng-if="medicalHistoryDetails.basicMedicalHistoryDetails.length!=0">
+        <div class="historyCategoryHeadingDiv">
+            <p class="pTagNoBottomMargin historyCategoryHeading"> MEDICAL HISTORY</p>
+        </div>
+        <div class="historyDetails" ng-repeat="history in medicalHistoryDetails.basicMedicalHistoryDetails" ng-class="{'lastRow':$last}">
+            <p class="pTagNoBottomMargin issueName">{{history.description}}</p>
+
+
+            <table class="dateDetails">
+                <tr class="dateHeading"><td>Date:</td></tr>
+                <tr class="dateData"><td>{{history.date|date:'MM/dd/yyyy'}}</td></tr>
+            </table>
+        </div>
+
+
+    </div>
+    <div class="medicalHistoryClass" ng-if="medicalHistoryDetails.surgicalHistoryDetails.length!=0">
+
+        <div class="historyCategoryHeadingDiv">
+            <p class="pTagNoBottomMargin historyCategoryHeading"> SURGICAL HISTORY</p>
+        </div>
+        <div class="historyDetails" ng-repeat="history in medicalHistoryDetails.surgicalHistoryDetails" ng-class="{'lastRow':$last}">
+            <p class="pTagNoBottomMargin issueName">{{history.description}}</p>
+
+
+            <table class="dateDetails">
+                <tr class="dateHeading"><td>Date:</td></tr>
+                <tr class="dateData"><td>{{history.date|date:'MM/dd/yyyy'}}</td></tr>
+            </table>
+        </div>
+
+
+
+
+    </div>
+    <div class="medicalHistoryClass" ng-if="medicalHistoryDetails.familyHistoryDetails.length!=0">
+        <div class="historyCategoryHeadingDiv">
+            <p class="pTagNoBottomMargin historyCategoryHeading"> FAMILY HISTORY</p>
+        </div>
+        <div class="familyHistoryDiv" ng-repeat="history in medicalHistoryDetails.familyHistoryDetails" ng-class="{'lastRow':$last}">
+            <table class="familyHistoryTable">
+                <tr class="diseaseName"><td>{{history.description}}</td></tr>
+                <tr class="relation"><td>{{history.relative}}</td></tr>
+            </table>
+        </div>
+
+
+    </div>
+    <div class="medicalHistoryClass" ng-if="medicalHistoryDetails.allergyDetails.length!=0">
+        <div class="historyCategoryHeadingDiv">
+            <p class="pTagNoBottomMargin historyCategoryHeading"> ALLERGIES</p>
+        </div>
+        <div class="historyDetails" ng-repeat="history in medicalHistoryDetails.allergyDetails" ng-class="{'lastRow':$last}">
+            <p class="pTagNoBottomMargin issueName">{{history.description}}</p>
+
+
+            <table class="dateDetails">
+                <tr class="dateHeading"><td>First Occurrence:</td></tr>
+                <tr class="dateData"><td>{{history.date|date:'MM/dd/yyyy'}}</td></tr>
+            </table>
+        </div>
+    </div>
+    <div class="medicalHistoryClass" ng-if="medicalHistoryDetails.cigarettesDetails.length!=0">
+        <div class="historyCategoryHeadingDiv">
+            <p class="pTagNoBottomMargin historyCategoryHeading"> CIGARETTES</p>
+        </div>
+        <div class="historyDetails" ng-repeat="history in medicalHistoryDetails.cigarettesDetails" ng-class="{'lastRow':$last}">
+            <p class="pTagNoBottomMargin issueName">{{history.description}}</p>
+
+
+            <table class="dateDetails">
+                <tr class="dateHeading"><td>Date:</td></tr>
+                <tr class="dateData"><td>{{history.date|date:'MM/dd/yyyy'}}</td></tr>
+            </table>
+        </div>
+    </div>
+    <div class="medicalHistoryClass" ng-if="medicalHistoryDetails.alcoholDetails.length!=0">
+
+        <div class="historyCategoryHeadingDiv">
+            <p class="pTagNoBottomMargin historyCategoryHeading"> ALCOHOL</p>
+        </div>
+        <div class="historyDetails extraPadding" ng-repeat="history in medicalHistoryDetails.alcoholDetails" style="border-bottom:transparent">
+            <p class="pTagNoBottomMargin issueName">{{history.description}}</p>
+        </div>
+
+    </div>
+
+</div>
+
